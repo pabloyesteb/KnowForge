@@ -26,10 +26,10 @@
     old_cv/
     transcripts/
   source_profiles/
-    courses/
+    <source-id>.md
+    courses/               # retained template, not a Source Profile
     projects/
-      _analysis/
-    supplementary/
+      _analysis/           # retained supporting analyses and contribution ledger
 ```
 
 - **`raw/projects/`** holds original local evidence for research, theses, software and other project Sources; external repositories can also be original evidence when registered or explicitly associated.
@@ -61,7 +61,7 @@ Archive-member listing order is not necessarily lecture order. A syllabus, table
 
 ## Previously processed source profiles
 
-`source_profiles/courses/`, `source_profiles/projects/`, and `source_profiles/supplementary/` preserve earlier inspections, technical summaries and selected project analyses. For example, `source_profiles/courses/ma3503-nonlinear-optimization.md` may help locate covered topics and relevant documents; `source_profiles/projects/_analysis/` may contain more detailed project or contribution evidence.
+Substantive profiles live directly under `source_profiles/<source-id>.md`. Each profile records its **Source ID**, matching a key under `sources:` in the registry; academic identifiers remain separate. For example, `source_profiles/tum-nonlinear-optimization.md` helps locate covered topics and documents. A concise **Content structure** section indexes the original documentary organization, without prescribing TreeNodes or Item boundaries. `source_profiles/case_studies.md` consolidates the course and project accounts of the same academic work under one Source. Templates and supporting analyses remain separate in their existing locations: `source_profiles/courses/_template.md` and `source_profiles/projects/_analysis/`.
 
 These profiles can speed up orientation, identify already examined material, and flag uncertain details. They are **secondary aids**. A claim included in a Tree Item should be grounded in an identifiable original document or repository revision whenever possible. Summaries must not be treated as proof of personally implemented work without supporting evidence. An outdated or conflicting profile is a reason to inspect the original, not to silently copy the profile.
 

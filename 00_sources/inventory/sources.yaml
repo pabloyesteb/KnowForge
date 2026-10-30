@@ -1,0 +1,209 @@
+# Central Source registry. Mapping keys are stable source IDs.
+# Relative locations resolve against this file's directory.
+# Archive members are cataloged only in archive_files.csv.
+# The former tum_archives location is ../raw/tum/archives;
+# individual conceptual course sources below replace that directory entry.
+project:
+  name: career-profile
+  language: english
+sources:
+  transcript:
+    title: TUM academic transcript, 7 October 2026
+    type: academic_record
+    sha256: f8b99fb8868a6c7c91c47e6cd2f1e5b296d53f5aff65ee0b6aae63f0a265d649
+    locations:
+      document: ../aux/transcripts/Leistungsnachweis_03797442_07102026_1242_20261007124207_1.pdf
+  tum-advanced-control:
+    title: Advanced Control
+    type: supplementary_material
+    academic_credit: not_established
+    learning_relationship: unspecified
+    sha256: f43a3e00feae79b56f0f49f8ab463341773b83386751d53ddfcf78a343fcd712
+    locations:
+      archive: ../raw/tum/archives/Advanced Control (W25_26)_20261012_1601.zip
+  tum-advanced-machine-learning:
+    title: 'Advanced Machine Learning: Deep Generative Models'
+    type: course
+    course_id: cit4230003
+    sha256: 431b0cc346fcfec22051ec15ec1e953ffb38e8f249dcf11b5af74e1625b36ae1
+    locations:
+      archive: ../raw/tum/archives/Advanced Machin 950803071 (S25)_20261012_1600.zip
+  tum-approximate-dynamic-programming:
+    title: Approximate Dynamic Programming and Reinforcement Learning
+    type: supplementary_material
+    academic_credit: not_established
+    learning_relationship: unspecified
+    sha256: ec2238835e44b848fdf25e7011a7e01cdd91bb8107d5ab972b64bc3027a60c90
+    locations:
+      archive: ../raw/tum/archives/Approximate Dyn 950837808 (W25_26)_20261012_1601.zip
+  tum-biologically-inspired-learning:
+    title: Biologically-Inspired Learning for Humanoid Robots
+    type: course
+    course_id: ei7263
+    sha256: 81a997e8c72563db3ff079f0fa12286f4bb76499ee9d97a57f4b0ad7d5d38553
+    locations:
+      archive: ../raw/tum/archives/Biologically-In 950799123 (S25)_20261012_1600.zip
+  tum-cognitive-systems:
+    title: 'Cognitive Systems: Neural Networks and Applied AI'
+    type: course
+    course_id: additional-cognitive-systems
+    sha256: a222bd0dea37d78c99ba3c7adc58cd0570064034d2b5fe669a8a7ffe4e073d25
+    locations:
+      archive: ../raw/tum/archives/CogSys SS2025_20261012_1559.zip
+  tum-combinatorial-optimization:
+    title: Combinatorial Optimization
+    type: course
+    course_id: ma4502
+    sha256: 796d0c5b5490ce130bc3d2189b37c1a183926a1615d448b48c0613eaef795cd0
+    locations:
+      archive: ../raw/tum/archives/Combinatorial O 950730014 (S24)_20261012_1548.zip
+  tum-computational-neuroscience:
+    title: 'Computational Neuroscience: A Lecture Series from Models to Applications'
+    type: course
+    course_id: ei7646
+    sha256: eaeca84a3f3e3d29c5c4b3dd4e821e27df46a0f04c83536b81325fcc89648204
+    locations:
+      archive: ../raw/tum/archives/Computational N 950766500 (W24_25)_20261012_1552.zip
+  tum-dynamical-systems:
+    title: Dynamical Systems
+    type: supplementary_material
+    academic_credit: not_established
+    learning_relationship: unspecified
+    sha256: 58917c1d35fceada21c3b0da51b73737887ee29be38721331b3e9d09919e4878
+    locations:
+      archive: ../raw/tum/archives/Dynamical Syste 950798440 (S25)_20261012_1600.zip
+  tum-foundations-data-analysis:
+    title: Foundations in Data Analysis
+    type: course
+    course_id: ma4800
+    sha256: b4c07d1fa1f4be5e85fa1c6801e9051863393b88499dc52e0ba2edb8c8a84cc8
+    locations:
+      archive: ../raw/tum/archives/Foundations in 950732430 (S24)_20261012_1529.zip
+  tum-functional-analysis:
+    title: Functional Analysis
+    type: course
+    course_id: ma3001
+    sha256: 8fbec3ad93c086e319d093dcebb05261f948450fe28647764cb1ddc87fc8a15a
+    locations:
+      archive: ../raw/tum/archives/Functional Anal 950763320 (W24_25)_20261012_1552.zip
+  tum-fundamentals-optimization-ml:
+    title: Fundamentals of Optimization for Machine Learning
+    type: course
+    course_id: additional-foml
+    sha256: 62abc4a87379139950a5054d44811786aecec91bd0423d864a348097aebdaf33
+    locations:
+      archive: ../raw/tum/archives/fund_opt_ML_CIT413031.zip
+  tum-mlmc-seminar:
+    title: 'Hauptseminar: Multilevel Monte Carlo Methods for Uncertainty Quantification'
+    type: course
+    course_id: ma6015
+    sha256: 735cf169d9299f2d623560b0aada047efccf74832e6bc29379d0345f0fe8d961
+    locations:
+      archive: ../raw/tum/archives/Hauptseminar_ MLMC for UQ (SoSe 25)_20261012_1600.zip
+  tum-intro-deep-rl:
+    title: Introduction to Deep Reinforcement Learning
+    type: course
+    course_id: mgt001299
+    sha256: 7c81f5da7418776ed3810839b8dee82b522153a3c7f9df1213fd9046e8302d3a
+    locations:
+      archive: ../raw/tum/archives/Introduction to 950839140 (W25_26)_20261012_1601.zip
+  tum-machine-learning-optimization:
+    title: Machine Learning and Optimization
+    type: supplementary_material
+    academic_credit: not_established
+    learning_relationship: unspecified
+    sha256: 5a969ea2375ee436c2771faee254c513e083dc1b46b7aaeb09f6296402fd3d49
+    locations:
+      archive: ../raw/tum/archives/Machine Learnin 950839125 (W25_26)_20261012_1602.zip
+  tum-mobile-robotics:
+    title: Mobile Robotik
+    type: supplementary_material
+    academic_credit: not_established
+    learning_relationship: unspecified
+    sha256: 1f995668e486821a77f107a5bdcbfc453ff0e1a8b7b124c5035f7d0f058ff1fb
+    locations:
+      archive: ../raw/tum/archives/Mobile Robotik 950765148 (W24_25)_20261012_1552.zip
+  tum-nonlinear-optimization:
+    title: 'Nonlinear Optimization: Advanced'
+    type: course
+    course_id: ma3503
+    sha256: 22a0369ee94a70108e835d842d4c43edfb060286f8da292530f2a5aca57dbac8
+    locations:
+      archive: ../raw/tum/archives/NLOA (W24_25)_20261012_1553.zip
+  tum-numuq:
+    title: Numerical Methods for Uncertainty Quantification
+    type: course
+    course_id: ma5348
+    sha256: 9a75258fd4366b82a10d8ddea13fbc396d35dde88188fdd6eb25a39da94bfd7e
+    locations:
+      archive: ../raw/tum/archives/NUMUQ (SoSe24)_20261012_1548.zip
+  tum-nlp:
+    title: Natural Language Processing
+    type: course
+    course_id: in2361
+    sha256: 45520e1929af4fb6218942aab38921ba2f50c5d80d6d9bc581ba4b6a5f6e2d12
+    locations:
+      archive: ../raw/tum/archives/Natural Languag 950767586 (W24_25)_20261012_1553.zip
+  tum-statistical-learning:
+    title: Statistical Learning
+    type: course
+    course_id: ma4802
+    sha256: 6243808f8f21d6f28f8b06061ea620c808e7f4db481467cd6ac4145bb1a2d701
+    locations:
+      archive: ../raw/tum/archives/Statistical Lea 950732556 (S24)_20261012_1548.zip
+  in2138:
+    title: Robot Motion Planning
+    type: course
+    course_id: in2138
+    notes: 'Official syllabus edition: Summer Semester 2024; attendance edition not established. No matching course
+      archive.'
+    locations:
+      in2138_official_syllabus: https://mvp.in.tum.de/courses/motion/syllabus.html#syllabus
+  master_thesis:
+    title: Robust Contact Rich Control for Manipulation
+    type: project
+    course_id: ma6018
+    locations:
+      repository: /home/pablo/TUM/SoSe 26/TFM/contact-rich-control
+      master_thesis_pdf: ../raw/projects/master_thesis/root_signed.pdf
+      master_thesis_presentation_pdf: ../raw/projects/master_thesis/final_presentation_notes.pdf
+      master_thesis_presentation_tex: ../raw/projects/master_thesis/final_presentation.tex
+  pyloworder:
+    title: pyLowOrder / pyLOM scientific software contributions
+    type: project
+    course_id: ma8102
+    references:
+    - pyloworder_dlr_reference
+    locations:
+      repository: /home/pablo/UPM/pyLowOrder
+  ngvalidation:
+    title: NGValidation — statistical validation of industrial supervised learning
+    type: project
+    notes: Existing scientific_paper profile documents the publication; repository registration alone establishes
+      no additional implementation claims.
+    locations:
+      repository: /home/pablo/UPM/NGValidation/UPM-NGValidation
+      article_pdf: /home/pablo/UPM/NGValidation/1-s2.0-S0957417425007912-main.pdf
+  case_studies:
+    title: Case Studies Optimization — Trajectory Optimization in Learned Environments
+    type: project
+    course_id: cit413042
+    notes: Course and project profiles describe the same academic work; report locations are original and preserved
+      copy.
+    locations:
+      repository: /home/pablo/TUM/SoSe 25/Case Studies/NLOTrajectories
+      case_studies_final_report: /home/pablo/TUM/SoSe 25/Case Studies/Trajectories-4.pdf
+      case_studies_pdf: ../raw/projects/case_studies/Trajectories-4.pdf
+  pyloworder_dlr_reference:
+    title: Graph neural networks for the prediction of aircraft surface pressure distributions — Hines and Bekemeyer
+      (2023)
+    type: publication
+    notes: External scientific reference; its published results are distinct from user implementation results.
+    locations:
+      document: ../raw/projects/pyloworder/1-s2.0-S1270963823001657-main.pdf
+  previous_cv:
+    title: Previous curriculum vitae
+    type: professional_document
+    sha256: 5530c3fc43f05750d4ebcf2e8ea77509049ca5d278d63624f22fd4fdaf5c2ebb
+    locations:
+      document: ../aux/old_cv/CV - Munique-1.pdf
