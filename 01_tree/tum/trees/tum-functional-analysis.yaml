@@ -1,0 +1,11 @@
+source: tum-functional-analysis
+nodes:
+  - id: fa-normed-spaces
+    title: Normed spaces and bounded operators
+    parent: null
+  - id: fa-hilbert-spaces
+    title: Hilbert spaces
+    parent: null
+  - id: fa-fundamental-principles
+    title: Fundamental principles, extension and duality
+    parent: null

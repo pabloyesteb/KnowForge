@@ -7,10 +7,10 @@ Provide two local commands to validate the source-specific knowledge Tree and ge
 ## Files and responsibilities
 
 ```text
-scripts/codex-helpers/
+scripts/
   tree.py           # CLI, file loading, in-memory data, structural validation
   tree_html.py      # Markdown conversion and static HTML generation
-tests/
+codex/tests/
   test_tree.py      # focused unit and end-to-end tests
 ```
 
@@ -73,24 +73,26 @@ Write the generated document to `path`, creating the destination directory if ne
 ## Command-line interface
 
 ```sh
-python3 scripts/codex-helpers/tree.py validate
-python3 scripts/codex-helpers/tree.py render
-python3 scripts/codex-helpers/tree.py validate --examples
-python3 scripts/codex-helpers/tree.py render --examples
+python3 scripts/tree.py validate
+python3 scripts/tree.py render
+python3 scripts/tree.py validate --examples
+python3 scripts/tree.py render --examples
 ```
 
 Production rendering writes `01_tree/index.html`; example rendering writes `01_tree/example_tree/index.html`. These are generated, disposable outputs.
+
+Using the existing local environment, generate the complete production viewer with `.venv/bin/python scripts/tree.py render` from the repository root. Open `01_tree/index.html` directly in a browser; no server or network is required.
 
 ## Dependencies and tests
 
 Use standard-library modules where practical, plus only the YAML, Markdown, mathematics and sanitization libraries genuinely required by the chosen renderer. Pin external dependency versions in one small requirements file. Do not introduce a web framework, database, server, schema framework or custom parser.
 
-Keep `tests/test_tree.py` focused on: empty production; valid examples; invalid IDs, parents, cycles, categories and types; separation of production/examples; commands from another working directory; safe rendering of Markdown; and preservation of an existing viewer after a failed render. Tests check structural behavior, not factual correctness or completeness of extracted knowledge.
+Keep `codex/tests/test_tree.py` focused on: empty production; valid examples; invalid IDs, parents, cycles, categories and types; separation of production/examples; commands from another working directory; safe rendering of Markdown; and preservation of an existing viewer after a failed render. Tests check structural behavior, not factual correctness or completeness of extracted knowledge.
 
 The implemented runtime versions are pinned in `requirements-tree.txt`: PyYAML reads YAML; markdown-it-py renders Markdown; mdit-py-plugins recognizes mathematical delimiters; latex2mathml converts TeX to native MathML; and Bleach sanitizes the result. `mdurl` and `webencodings` are their pinned transitive dependencies. The existing local `.venv` can run the commands and focused suite:
 
 ```sh
-.venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python -m unittest discover -s codex/tests -v
 ```
 
 Production Source titles come from the registry; Tree categories come only from directory placement. No category inference uses original evidence locations or Source types. Production and example data are discovered separately, with `example_tree/` excluded from production discovery even if it contains `trees/` and `items/` directly. Example titles are humanized fictional IDs; examples never read the registry. Item bodies are retained verbatim, with no automated prose or provenance judgments.

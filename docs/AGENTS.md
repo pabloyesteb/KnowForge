@@ -10,11 +10,13 @@ The authoritative project documentation lives in `docs/`. Each file has a distin
 | [`00_sources.md`](00_sources.md) | Source registry, original evidence, inventories, source profiles and path conventions |
 | [`01_tree.md`](01_tree.md) | TreeNode and Item definitions, schemas, granularity, coverage and worked examples |
 | [`implementation/tree.md`](implementation/tree.md) | Tree Python scripts, function responsibilities, command interface, dependencies and tests |
-| `codex/` | Task-specific procedural instructions for Codex, not static project specifications or technical documentation |
+| `../codex/instructions/` | Task-specific procedures for Codex (not project specifications) |
+| `../codex/scripts/` | Auxiliary scripts for Codex tasks |
+| `../codex/_work/` | Temporary operational state for ongoing Codex tasks |
 | `AGENTS.md` (this file) | Working behavior, authorization, evidence standards and reporting |
-| `legacy_inventory/` (when present) | Historical reports, not current specifications |
+| `../00_sources/inventory/legacy_inventory/` | Historical reports, not current specifications |
 
-Read the project overview and the documents relevant to the task before making changes. When a task has a corresponding procedure in `docs/codex/`, consult it; these files guide execution and do not override the project specifications. Tree implementation work uses `01_tree.md` and `implementation/tree.md`; source extraction uses `00_sources.md` and `01_tree.md`. Future stages receive separate documentation when designed.
+Read the project overview and the documents relevant to the task before making changes. When a task has a corresponding procedure in `codex/instructions/`, consult it; these files guide execution and do not override the project specifications. Tree implementation work uses `01_tree.md` and `implementation/tree.md`; source extraction uses `00_sources.md` and `01_tree.md`. Future stages receive separate documentation when designed.
 
 This file governs **how to work**, not the data schemas, functional requirements or implementation details. Do not duplicate those specifications here.
 

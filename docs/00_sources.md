@@ -73,4 +73,4 @@ The source stage remains independently useful as an auditable evidence collectio
 
 ## Integrity and maintenance
 
-Original materials and external repositories are read-only. Moves and renames can invalidate registry locations, profile references and helper scripts. The existing validator is `scripts/codex-helpers/validate_inventory.py`; its passing result checks repository consistency, not the factual correctness of every source summary. Historical reports under `docs/legacy_inventory/` are retained as historical records rather than rewritten to match every new directory layout.
+Original materials and external repositories are read-only. Moves and renames can invalidate registry locations, profile references and helper scripts. The existing validator is `codex/scripts/validate_inventory.py`; its passing result checks repository consistency, not the factual correctness of every source summary. Historical reports under `00_sources/inventory/legacy_inventory/` are retained as historical records rather than rewritten to match every new directory layout.

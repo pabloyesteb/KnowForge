@@ -37,8 +37,7 @@ career-profile/
     source_profiles/
   01_tree/
     example_tree/          # isolated demonstration dataset
-    projects/              # production, created as needed
-    tum/                   # production, created as needed
+    tum/                   # production source data
   02_graph/                # planned
   03_master_profile/       # downstream
   04_cv/                   # downstream
@@ -49,9 +48,14 @@ career-profile/
     01_tree.md
     implementation/
       tree.md
-    legacy_inventory/
+  codex/
+    instructions/          # task-specific procedures
+    scripts/               # source-inspection helpers
+    tests/                 # Tree implementation tests
+    _work/                 # active extraction plans and progress
   scripts/
-    codex-helpers/
+    tree.py                # Tree CLI and validation
+    tree_html.py           # offline HTML renderer
 ```
 
 Some planned directories may not yet exist. The diagram represents responsibilities, not a requirement to pre-create empty trees or stages.
@@ -62,8 +66,8 @@ Original material and external repositories remain read-only. The inventory iden
 
 Knowledge data uses inspectable Markdown and YAML. Supporting scripts are intentionally small and limited to concrete validation or visualization needs; the Tree implementation is documented separately in [`implementation/tree.md`](implementation/tree.md). There is no database, semantic-search system, or automatic graph construction in the current tree stage.
 
-The stage documents specify data structures, provenance and procedures in human-readable technical terms. [`AGENTS.md`](AGENTS.md) governs Codex working behavior and change authorization; it is not another model specification. Historical reports remain under `docs/legacy_inventory/` for reference.
+The stage documents specify data structures, provenance and procedures in human-readable technical terms. [`AGENTS.md`](AGENTS.md) governs Codex working behavior and change authorization; it is not another model specification. Historical reports remain under `00_sources/inventory/legacy_inventory/` for reference.
 
 ## Current work
 
-The present focus is implementing minimal tree validation and a static read-only explorer, using the isolated examples under `01_tree/example_tree/`, then extracting and reviewing one complete course Source in consecutive batches. The `02_graph/` schema and infrastructure are intentionally deferred.
+The Tree validator and static read-only explorer are implemented; extraction is underway Source by Source in consecutive batches. Operational plans live in `codex/_work/`, with reusable Codex procedures in `codex/instructions/`. The `02_graph/` schema and infrastructure are intentionally deferred.
