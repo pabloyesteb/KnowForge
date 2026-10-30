@@ -21,7 +21,7 @@ Use two implementation modules, not a package or framework. `tree.py` imports `t
 Use three simple `dataclasses` without behavior:
 
 - `Node(id, title, parent)`: a TreeNode; `parent` is a Node ID or `None`.
-- `SourceTree(source, title, category, nodes, path)`: one Source tree, its display title, `projects`/`tum` category, ordered Nodes and YAML path.
+- `SourceTree(source, title, category, nodes, path)`: one Source tree, its display title, directory category, ordered Nodes and YAML path.
 - `Item(id, source, parent, title, type, body, category, path)`: one Markdown Item, including its original Markdown body, category and file path.
 
 `category` and `path` on loaded objects are **internal context**, not new YAML/frontmatter fields. No `Dataset`, `Diagnostic`, inheritance hierarchy or persistent index is needed.
@@ -30,19 +30,19 @@ Use three simple `dataclasses` without behavior:
 
 ### `load_registry(root)`
 
-Read `00_sources/inventory/sources.yaml` and return the minimal mapping needed to identify production Sources, their display titles and categories. Follow the registry's **actual structure**; resolve any registry locations relative to the registry directory. Do not inspect original evidence or validate the whole inventory.
+Read `00_sources/inventory/sources.yaml` and return production Source IDs, display titles and resolved locations. Follow the registry's **actual structure**; resolve registry locations relative to the registry directory. The registry does not determine Tree categories. Do not inspect original evidence or validate the whole inventory.
 
 ### `load_trees(base, registry, examples)`
 
-Read `projects/trees/*.yaml` and `tum/trees/*.yaml` under `base`. Return `list[SourceTree]`, preserving YAML Node order. In production, match Source IDs against the registry; examples are independent of it. Require the agreed tree fields and readable values. The YAML filename stem must match its Source ID.
+Discover immediate category directories under `base` that contain both `trees/` and `items/`, excluding the reserved `example_tree/` directory. Read each category's `trees/*.yaml`. Return `list[SourceTree]`, preserving YAML Node order and taking each tree's category from its directory. In production, match Source IDs against the registry; examples are independent of it. Require the agreed tree fields and readable values. The YAML filename stem must match its Source ID.
 
 ### `load_items(base)`
 
-Read `projects/items/*.md` and `tum/items/*.md` under `base`. Parse the five required frontmatter fields, retain the Markdown body unchanged, and return `list[Item]`. Preserve each file's category and path for validation and useful error messages. Do not judge prose, references or technical content.
+Use the same immediate category discovery as `load_trees()` and read each category's `items/*.md`. Parse the five required frontmatter fields, retain the Markdown body unchanged, and return `list[Item]`. Preserve each file's category and path for validation and useful error messages. Do not judge prose, references or technical content.
 
 ### `validate(trees, items)`
 
-Check the structural rules in [`../01_tree.md`](../01_tree.md): unique IDs, matching file stems, Source/category consistency, valid parent references, acyclic Node relationships and allowed Item types. Reject malformed required fields. Stop at the first error with `ValueError` mentioning the affected file and reason. Empty production data and Nodes without Items are valid. Do not add automated editorial or evidence-quality checks.
+Check the structural rules in [`../01_tree.md`](../01_tree.md): unique IDs, matching file stems, same-category placement of a Source tree and its Items, valid parent references, acyclic Node relationships and allowed Item types, including `other`. Reject malformed required fields. Stop at the first error with `ValueError` mentioning the affected file and reason. Empty production data and Nodes without Items are valid. Do not add automated editorial or evidence-quality checks.
 
 ### `load_tree(root, examples)`
 
@@ -60,7 +60,7 @@ Convert Item Markdown to readable HTML, supporting headings, lists, tables, code
 
 ### `render_navigation(trees, items)`
 
-Build the virtual `Career Profile → Projects/TUM → Source → TreeNode → Item` navigation. Preserve YAML order for sibling Nodes; use a deterministic order for sibling Items. Escape displayed text. Return an HTML fragment; do not write files or modify the input objects.
+Build the virtual `Career Profile → Category → Source → TreeNode → Item` navigation, grouping loaded Sources by their discovered categories. Humanize directory names for category headings. Preserve YAML order for sibling Nodes; use a deterministic order for sibling Items. Escape displayed text. Return an HTML fragment; do not write files or modify the input objects.
 
 ### `render_page(trees, items, examples)`
 
@@ -86,6 +86,18 @@ Production rendering writes `01_tree/index.html`; example rendering writes `01_t
 Use standard-library modules where practical, plus only the YAML, Markdown, mathematics and sanitization libraries genuinely required by the chosen renderer. Pin external dependency versions in one small requirements file. Do not introduce a web framework, database, server, schema framework or custom parser.
 
 Keep `tests/test_tree.py` focused on: empty production; valid examples; invalid IDs, parents, cycles, categories and types; separation of production/examples; commands from another working directory; safe rendering of Markdown; and preservation of an existing viewer after a failed render. Tests check structural behavior, not factual correctness or completeness of extracted knowledge.
+
+The implemented runtime versions are pinned in `requirements-tree.txt`: PyYAML reads YAML; markdown-it-py renders Markdown; mdit-py-plugins recognizes mathematical delimiters; latex2mathml converts TeX to native MathML; and Bleach sanitizes the result. `mdurl` and `webencodings` are their pinned transitive dependencies. The existing local `.venv` can run the commands and focused suite:
+
+```sh
+.venv/bin/python -m unittest discover -s tests -v
+```
+
+Production Source titles come from the registry; Tree categories come only from directory placement. No category inference uses original evidence locations or Source types. Production and example data are discovered separately, with `example_tree/` excluded from production discovery even if it contains `trees/` and `items/` directly. Example titles are humanized fictional IDs; examples never read the registry. Item bodies are retained verbatim, with no automated prose or provenance judgments.
+
+The single-file viewer embeds its CSS and small interaction script. Equations using `$…$`, `$$…$$`, `\(…\)` and `\[…\]` become MathML in Python and require a modern browser with native MathML support. TeX support is limited to latex2mathml's supported syntax; conversion errors display escaped original notation as `Unrendered TeX`. Code remains literal. Raw HTML is escaped, generated HTML/MathML is sanitized, and images are omitted; no CDN, web fonts or automatic external assets are needed. Item display order is title-based, with ID as a tie-breaker, and does not imply source chronology.
+
+Both commands use `load_tree()`. HTML is fully rendered before `write_html()` writes a temporary file beside the output and replaces the viewer. Failures leave an existing viewer intact. Generated viewer files are ignored by Git.
 
 ## Non-goals
 

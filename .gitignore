@@ -32,3 +32,7 @@ Thumbs.db
 
 # Local configuration containing personal paths
 /config/sources.yaml
+
+# Disposable Tree viewers
+/01_tree/index.html
+/01_tree/example_tree/index.html

@@ -53,12 +53,13 @@ The `type` vocabulary is deliberately small:
 | `implementation` | Evidence of a concrete software/system implementation or component |
 | `experiment` | Experimental design, measurements, comparisons or evaluation |
 | `result` | Distinct technical finding not better described by the other kinds |
+| `other` | Fallback for substantive Items that do not clearly fit an existing type |
 
 `type` records the dominant character of an Item; it does not force an Item containing mathematics and computation to be artificially split. There are no required `topic`, `order`, `confidence`, `category` or career-rating fields. Topic assignment and cross-source links belong to the future graph.
 
 ## Physical layout
 
-Production data is divided by origin:
+Production data is grouped into directory-based categories. The existing `projects/` and `tum/` categories illustrate the layout; they are not a fixed vocabulary:
 
 ```text
 01_tree/
@@ -79,13 +80,13 @@ Production data is divided by origin:
       items/example-newton.md
 ```
 
-The `projects/` and `tum/` branches reflect `00_sources/raw/projects/` and `00_sources/raw/tum/`. This category is encoded by location, not by an additional data field. Sources are identified by the registry, **not** inferred from directory names. A Source's YAML tree and all its Items stay in the same category.
+Categories are discovered from immediate subdirectories of the selected Tree directory that contain both `trees/` and `items/` directories. Production discovery excludes `example_tree/`; example discovery operates only inside it. A Source tree's category is its containing category directory, independent of original evidence locations or Source types. Sources are identified by the registry, **not** inferred from category names. A Source's YAML tree and all its Items stay in the same category, encoded by location rather than an additional data field.
 
 The files under `01_tree/example_tree/` are **isolated fixtures**. They are not production knowledge, their IDs do not need to occur in `sources.yaml`, and the project implementation must validate/render them in a separate example mode rather than by silently mixing them into production. Production directories and tree files are created only as extraction reaches each Source; unused Sources need no empty tree files.
 
 ## Single master navigation root
 
-The read-only explorer presents one default, expanded master root and two category headings:
+The read-only explorer presents one default, expanded master root and headings for the discovered categories with loaded Sources. Category headings are humanized directory names; the existing layout is illustrated below:
 
 ```text
 ▼ Career Profile                 (virtual master root)
@@ -93,13 +94,13 @@ The read-only explorer presents one default, expanded master root and two catego
     ▼ <project Source>           (registered Source)
       ▼ <section>                (TreeNode)
         • <knowledge Item>       (Item)
-  ▼ TUM                          (virtual category)
+  ▼ Tum                          (virtual category)
     ▼ <course Source>            (registered Source)
       ▼ <lecture or section>     (TreeNode)
         • <knowledge Item>       (Item)
 ```
 
-**Career Profile**, **Projects** and **TUM** are synthetic navigation headings, not persisted TreeNodes or additional knowledge objects. The master root is displayed by default; no `master.yaml` or per-source synthetic root is necessary. `00_sources/aux/` is supporting evidence and has no default navigation branch.
+**Career Profile** and the category headings are synthetic navigation elements, not persisted TreeNodes or additional knowledge objects. The master root is displayed by default; no `master.yaml` or per-source synthetic root is necessary. `00_sources/aux/` is supporting evidence and has no default navigation branch.
 
 ## Tree YAML format
 
@@ -238,8 +239,8 @@ YAML and Markdown are the authoritative Tree data. Validation checks that the fi
 - Production Source IDs are registered; each Item refers to an existing Source tree.
 - TreeNode parents exist within their Source or are `null`; Item parents refer to TreeNodes in the same Source.
 - TreeNode parent relationships contain no cycles.
-- Item types belong to the defined seven-value vocabulary.
-- Source trees and Items reside in the corresponding `projects/` or `tum/` category.
+- Item types belong to the defined eight-value vocabulary, including the `other` fallback.
+- Each Source tree and its Items reside in the same discovered category.
 - Example data is validated independently of production data and does not require registration.
 
 An empty production Tree is valid. Validation concerns structural consistency, **not** technical correctness, extraction completeness or the quality of evidence. Those are assessed during source-grounded extraction and review. The requirement for substantive Items and precise source references remains an editorial requirement, not an automated quality judgment.
@@ -248,7 +249,7 @@ An empty production Tree is valid. Validation concerns structural consistency, *
 
 The Tree can be explored in a static, offline HTML viewer generated from the YAML and Markdown files. The viewer provides:
 
-- The virtual `Career Profile → Projects/TUM → Source → TreeNode → Item` hierarchy.
+- The virtual `Career Profile → Category → Source → TreeNode → Item` hierarchy.
 - Expandable navigation and Item selection.
 - Search by Item title and display of Item type.
 - Readable Markdown, code and mathematical notation.
