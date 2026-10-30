@@ -47,7 +47,8 @@ career-profile/
     project_overview.md
     00_sources.md
     01_tree.md
-    plumbing.md
+    implementation/
+      tree.md
     legacy_inventory/
   scripts/
     codex-helpers/
@@ -59,7 +60,7 @@ Some planned directories may not yet exist. The diagram represents responsibilit
 
 Original material and external repositories remain read-only. The inventory identifies Sources and where to find them. Existing source profiles contain useful prior inspection and analysis, but they do not override original evidence. Tree extraction is incremental, linear through each Source, and exhaustive in coverage of substantive accessible material—not a representative sampling exercise.
 
-Knowledge data uses inspectable Markdown and YAML. Supporting scripts are intentionally small and limited to concrete validation or visualization needs; their operational design is documented in [`plumbing.md`](plumbing.md). There is no database, semantic-search system, or automatic graph construction in the current tree stage.
+Knowledge data uses inspectable Markdown and YAML. Supporting scripts are intentionally small and limited to concrete validation or visualization needs; the Tree implementation is documented separately in [`implementation/tree.md`](implementation/tree.md). There is no database, semantic-search system, or automatic graph construction in the current tree stage.
 
 The stage documents specify data structures, provenance and procedures in human-readable technical terms. [`AGENTS.md`](AGENTS.md) governs Codex working behavior and change authorization; it is not another model specification. Historical reports remain under `docs/legacy_inventory/` for reference.
 

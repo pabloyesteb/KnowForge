@@ -9,13 +9,13 @@ The authoritative project documentation lives in `docs/`. Each file has a distin
 | [`project_overview.md`](project_overview.md) | Goals, stage boundaries, repository layout and current scope |
 | [`00_sources.md`](00_sources.md) | Source registry, original evidence, inventories, source profiles and path conventions |
 | [`01_tree.md`](01_tree.md) | TreeNode and Item definitions, schemas, granularity, coverage and worked examples |
-| [`plumbing.md`](plumbing.md) | File discovery, validation, rendering, commands, fixtures and future Graph plumbing |
+| [`implementation/tree.md`](implementation/tree.md) | Tree Python scripts, function responsibilities, command interface, dependencies and tests |
 | `AGENTS.md` (this file) | Working behavior, authorization, evidence standards and reporting |
 | `legacy_inventory/` (when present) | Historical reports, not current specifications |
 
-Read the project overview and the documents relevant to the task before making changes. Tree infrastructure work uses `01_tree.md` and `plumbing.md`; source extraction uses `00_sources.md` and `01_tree.md`. Future stages receive separate documentation when designed.
+Read the project overview and the documents relevant to the task before making changes. Tree implementation work uses `01_tree.md` and `implementation/tree.md`; source extraction uses `00_sources.md` and `01_tree.md`. Future stages receive separate documentation when designed.
 
-This file governs **how to work**, not the data schemas or command interface. Do not duplicate stage or infrastructure specifications here.
+This file governs **how to work**, not the data schemas, functional requirements or implementation details. Do not duplicate those specifications here.
 
 **Discovery:** `docs/AGENTS.md` is not a root-level `AGENTS.md`. An agent started at the repository root may not automatically load it. Until a root-level entry point exists, prompts should explicitly direct the agent to read `docs/AGENTS.md`.
 

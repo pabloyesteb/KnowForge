@@ -125,7 +125,7 @@ nodes:
     parent: null
 ```
 
-An example Item associated with `example-constrained` carries the relation in its own frontmatter. The association is therefore stored **once**, not repeated as an `items:` list in the tree YAML. Nodes can be added incrementally as a source's actual structure becomes clear. A viewer may preserve YAML listing order among sibling TreeNodes and sort Items by title for convenience; neither order promises the source's original teaching chronology.
+An example Item associated with `example-constrained` carries the relation in its own frontmatter. The association is therefore stored **once**, not repeated as an `items:` list in the tree YAML. Nodes can be added incrementally as a source's actual structure becomes clear. The viewer preserves YAML listing order among sibling TreeNodes. Sibling Items use a deterministic display order without implying the source's original teaching chronology.
 
 ## Item Markdown format and worked examples
 
@@ -220,7 +220,7 @@ Item boundaries follow **the smallest independently useful unit that remains tec
 
 This is neither one-Item-per-slide fragmentation nor one-Item-per-lecture summarization. Course credit values and page counts do not determine an Item quota. An index, syllabus or chapter list helps reconstruct the source's sequence and plan its extraction, but should not cause selective harvesting of highlights. Extraction proceeds linearly through all accessible substantive content, with reviewable batches and exact continuation points. A batch is **not** a representative sample or a statement of completion.
 
-At the end of a Source, coverage is reviewed against its original contents and supporting material. Administrative notices and duplicated explanations need not become Items; inaccessible portions and uncertainty must be identified rather than silently ignored. The absence of a mandatory `order` field is intentional. A viewer can organize siblings for convenience without claiming a recovered chronology.
+At the end of a Source, coverage is reviewed against its original contents and supporting material. Administrative notices and duplicated explanations need not become Items; inaccessible portions and uncertainty must be identified rather than silently ignored. The absence of a mandatory `order` field is intentional. The viewer uses a deterministic sibling Item order for convenience without claiming a recovered chronology.
 
 ## Evidence and provenance
 
@@ -230,6 +230,28 @@ An Item includes a **Source references** section with source document/repository
 
 `00_sources/source_profiles/` holds previous source inspections and technical analyses. These are useful orientation and cross-checking aids for extraction, but are not a substitute for the original lecture materials, project artifacts or repository history. The primary references recorded in production Items should point to original evidence.
 
-## Validation and visualization
+## Structural validation
 
-YAML and Markdown remain the authoritative Tree data. Structural checks, isolated example mode, command interfaces and read-only HTML exploration are documented in [`plumbing.md`](plumbing.md). These are operational concerns separate from the TreeNode and Item definitions above.
+YAML and Markdown are the authoritative Tree data. Validation checks that the files can form a coherent hierarchy:
+
+- TreeNode IDs are unique within each Source; Item IDs are unique across the dataset and match their Markdown filename stems.
+- Production Source IDs are registered; each Item refers to an existing Source tree.
+- TreeNode parents exist within their Source or are `null`; Item parents refer to TreeNodes in the same Source.
+- TreeNode parent relationships contain no cycles.
+- Item types belong to the defined seven-value vocabulary.
+- Source trees and Items reside in the corresponding `projects/` or `tum/` category.
+- Example data is validated independently of production data and does not require registration.
+
+An empty production Tree is valid. Validation concerns structural consistency, **not** technical correctness, extraction completeness or the quality of evidence. Those are assessed during source-grounded extraction and review. The requirement for substantive Items and precise source references remains an editorial requirement, not an automated quality judgment.
+
+## Read-only visualization
+
+The Tree can be explored in a static, offline HTML viewer generated from the YAML and Markdown files. The viewer provides:
+
+- The virtual `Career Profile → Projects/TUM → Source → TreeNode → Item` hierarchy.
+- Expandable navigation and Item selection.
+- Search by Item title and display of Item type.
+- Readable Markdown, code and mathematical notation.
+- A clear empty state when production data has not yet been extracted.
+
+Production and example viewers are generated separately. HTML is a disposable, read-only output, never a second authoritative store. Rendering does not modify Tree data. The Python scripts, commands, dependencies and implementation tests are specified in [`implementation/tree.md`](implementation/tree.md).
