@@ -35,8 +35,12 @@ P_{B_2}(x)=\frac{x}{\max(1,\|x\|_2)}.
 \]
 An interior point projects to itself; an exterior point projects radially to the boundary. Replacing the ball by the sphere changes the problem: the sphere is not convex, at zero every sphere point is nearest, and the displayed ball formula would return an infeasible point for \(\|x\|<1\). The theorem is therefore not a generic nearest-point guarantee for all closed sets.
 
+The assumptions also explain distinct failure modes. For an open ball and a point outside its closure, the infimum distance occurs only on the excluded boundary, so it is not attained in the set. A closed convex target can have several nearest points under a norm such as \(\ell_\infty\), whose unit ball has flat sides; the Hilbert-space uniqueness argument does not extend to arbitrary norms. Nonconvex sets can likewise admit ties even with the Euclidean norm. These are possible failures, not assertions that every non-Euclidean norm or nonconvex set always gives nonuniqueness.
+
 ## Source references
 
 Archive: `00_sources/raw/tum/archives/Foundations in 950732430 (S24)_20261012_1529.zip`.
 - `Introduction and general information/Booklet of Exercises FDA.pdf`, Exercises 1.1.3(b)/1.1.4, p. 4; solutions, pp. 10–12.
 - `22. April - 28. April/Problem Set 1.pdf`, Exercise 1.1(a–c), p. 1.
+- `29. April - 5. Mai/Solution Sheet 1.pdf`, Exercise 1.1(a–c), single physical page (handwritten proof and geometric illustrations).
+- `29. April - 5. Mai/Notes All you... math week 2`, single physical page, final “Miscellaneous — Projections #2”, nonclosed-set, infinity-norm and nonconvex-set diagrams.

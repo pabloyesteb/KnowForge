@@ -3,3 +3,19 @@ nodes:
   - id: fda-linear-geometry
     title: Linear algebra and Hilbert-space geometry
     parent: null
+
+  - id: fda-svd
+    title: SVD, low-rank approximation and dimensional coordinates
+    parent: null
+
+  - id: fda-probability
+    title: Probability and high-dimensional concentration
+    parent: null
+
+  - id: fda-random-projections
+    title: Random projections and dimension reduction
+    parent: null
+
+  - id: fda-convex-optimization
+    title: Convex analysis and optimization
+    parent: null

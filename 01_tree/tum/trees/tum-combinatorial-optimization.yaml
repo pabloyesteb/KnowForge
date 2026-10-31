@@ -1,0 +1,9 @@
+source: tum-combinatorial-optimization
+nodes:
+  - id: co-foundations
+    title: Graph models, complexity and shortest paths
+    parent: null
+
+  - id: co-trees-matroids
+    title: Minimum spanning trees and matroids
+    parent: null

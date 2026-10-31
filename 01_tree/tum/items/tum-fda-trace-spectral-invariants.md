@@ -23,8 +23,11 @@ Distinct eigenvalues are sufficient for the diagonalization argument, but the tr
 
 Thus trace gives a basis-independent aggregate spectral quantity, while not determining individual eigenvalues or eigenvectors.
 
+For a real symmetric matrix, the diagonalizing matrix can be chosen orthogonal, so \(D=Q^TAQ\) and cyclicity gives \(\operatorname{tr}(D)=\operatorname{tr}(AQQ^T)=\operatorname{tr}(A)\). This orthogonal form uses symmetry; a general diagonalizable matrix requires a general similarity transformation instead.
+
 ## Source references
 
 Archive: `00_sources/raw/tum/archives/Foundations in 950732430 (S24)_20261012_1529.zip`.
 - `Introduction and general information/Booklet of Exercises FDA.pdf`, Exercise 1.1.6(a), p. 5; further exercise “Trace”, p. 6; solution, p. 14.
 - `22. April - 28. April/Problem Set 1.pdf`, Exercise 1.3(a), p. 2.
+- `29. April - 5. Mai/Solution Sheet 1.pdf`, Exercise 1.3(a), single physical page, following Exercise 1.2.
