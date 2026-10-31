@@ -18,6 +18,34 @@ import tree
 import tree_html
 
 
+class MathRenderingTests(unittest.TestCase):
+    def test_all_math_delimiters(self):
+        for opening, closing, display in [
+            (r"\(", r"\)", "inline"), (r"\[", r"\]", "block"),
+            ("$", "$", "inline"), ("$$", "$$", "block"),
+        ]:
+            with self.subTest(opening=opening):
+                formula = r"\operatorname{tr}(ABC)=\operatorname{tr}(BCA)"
+                math = opening + ("\n" if display == "block" else "") + formula
+                math += ("\n" if display == "block" else "") + closing
+                prefixes = ("", "A trace identity:\n\n" if opening == "$$" else "A trace identity:\n")
+                for prefix in prefixes:
+                    rendered = tree_html.render_markdown(prefix + math)
+                    self.assertEqual(rendered.count("<math "), 1)
+                    self.assertIn(f'display="{display}"', rendered)
+                    self.assertNotIn(r"\operatorname", rendered)
+
+    def test_display_math_preserves_adjacent_prose_and_literal_code(self):
+        rendered = tree_html.render_markdown(
+            "Before.\n\\[\nx^2\n\\]\nAfter.\n\n"
+            "`\\[literal\\]`\n\n```latex\n\\[literal\\]\n```\n")
+        self.assertEqual(rendered.count("<math "), 1)
+        self.assertIn("Before.</p>", rendered)
+        self.assertIn("<p>After.</p>", rendered)
+        self.assertIn(r"<code>\[literal\]</code>", rendered)
+        self.assertIn(r"\[literal\]", rendered.split("<pre>", 1)[1])
+
+
 class TreeTests(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory()

@@ -23,6 +23,11 @@ def render_markdown(text):
     parser = MarkdownIt("commonmark", {"html": False}).enable("table")
     parser.use(texmath_plugin, delimiters="brackets")
     parser.use(dollarmath_plugin, allow_labels=False, renderer=_math)
+    # The first math_block rule is texmath's bracket parser. Let it end prose.
+    for rule in parser.block.ruler.__rules__:
+        if rule.name == "math_block":
+            rule.alt = ["paragraph"]
+            break
     parser.block.ruler.disable(["math_block_eqno"])
     tags = {
         "p", "br", "hr", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li",
