@@ -1,0 +1,5 @@
+source: tum-foundations-data-analysis
+nodes:
+  - id: fda-linear-geometry
+    title: Linear algebra and Hilbert-space geometry
+    parent: null

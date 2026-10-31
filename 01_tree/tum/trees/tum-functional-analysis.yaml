@@ -9,3 +9,15 @@ nodes:
   - id: fa-fundamental-principles
     title: Fundamental principles, extension and duality
     parent: null
+  - id: fa-weak-compactness
+    title: Compact subsets and weak convergence
+    parent: null
+  - id: fa-sobolev-distributions
+    title: Sobolev spaces and distributions
+    parent: null
+  - id: fa-compact-fredholm
+    title: Compact, adjoint and Fredholm operators
+    parent: null
+  - id: fa-spectral-theory
+    title: Spectrum and compact normal operators
+    parent: null

@@ -1,0 +1,14 @@
+source: tum-nonlinear-optimization
+nodes:
+  - id: nloa-existence-geometry
+    title: Existence, tangent geometry and variational optimality
+    parent: null
+  - id: nloa-cq-kkt
+    title: Constraint qualifications and KKT conditions
+    parent: null
+  - id: nloa-second-order-penalty
+    title: Second-order conditions and penalty methods
+    parent: null
+  - id: nloa-sqp-barrier
+    title: SQP and barrier methods
+    parent: null

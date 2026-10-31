@@ -19,7 +19,14 @@ This maps \(c\) onto \(c_0\), with inverse \((Sy)_k=y_{k+1}+y_1\); both norms ar
 
 On \(c_e\) with the supremum norm, \(Tx=(x_n/n)_n\) is bounded and bijective; its inverse \(Sx=(nx_n)_n\) still maps finite sequences to finite sequences but is unbounded since \(\|Se_n\|_\infty=n\). The image of the open unit ball under \(T\) contains zero but not \(T(e_n)=e_n/n\), which tends to zero; thus that image is not open. Completeness cannot be omitted from the bounded-inverse/open-mapping conclusions.
 
+## Pulling back a norm
+
+If linear \(T:X\to X\) is injective and \(\|\cdot\|_a\) is a norm, then \(\|x\|_b=\|Tx\|_a\) is a norm. Injectivity supplies definiteness; linearity transfers homogeneity and the triangle inequality. This does not imply equivalence to the old norm.
+
+On zero-indexed finite sequences, \(\|x\|_a=\max_k(k+1)|x_k|\) makes \(Tx=((k+1)x_k)_k\) an isometric isomorphism to the same vector space with sup norm. But the identity from the sup-norm space to the weighted-norm space is unbounded: \(\|e_n\|_\infty=1\), \(\|e_n\|_a=n+1\). An isometry between differently represented spaces and equivalence of norms under the identity are distinct assertions.
+
 ## Source references
 Archive: `00_sources/raw/tum/archives/Functional Anal 950763320 (W24_25)_20261012_1552.zip`. Lecture notes are WS 2017/18; exercise/solution sheets are WS 2024/25.
 - `Materials/Lecture notes.pdf`, Definition 1.5 and Proposition 1.6, pp. 7–8.
 - `Problem sheets/Problem Sheet 5.pdf` and `Solutions to problem sheets/Solutions Sheet 5.pdf`, T5.4.
+- `Problem sheets/Problem Sheet 14.pdf` and `Solutions to problem sheets/Solutions Sheet 14.pdf`, T14.1.

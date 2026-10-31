@@ -48,8 +48,18 @@ x(t)=\sin(\pi t)+6t/\pi.
 \]
 This example illustrates the sufficient nature of \(\|T\|<1\); summability of operator powers also suffices.
 
+## Stability of bounded invertibility
+
+If \(T:X\to Y\) is a bounded isomorphism between Banach spaces and
+\(\|\widetilde T-T\|<1/\|T^{-1}\|\), then
+\[
+\widetilde T=T\bigl(I-T^{-1}(T-\widetilde T)\bigr)
+\]
+is again a bounded isomorphism. The operator inside the parentheses is invertible by the Neumann criterion. Thus boundedly invertible maps form an operator-norm open set; the admissible perturbation size depends on the inverse norm.
+
 ## Source references
 Archive: `00_sources/raw/tum/archives/Functional Anal 950763320 (W24_25)_20261012_1552.zip`. Lecture notes are WS 2017/18; exercise/solution sheets are WS 2024/25.
 - `Materials/Lecture notes.pdf`, Definition 1.21 and Proposition 1.22, pp. 18–19; Proposition 1.10 and Lemma 1.12 for the operator-space ingredients.
 - `Problem sheets/Problem Sheet 3.pdf`, T3.3; `Solutions to problem sheets/Solutions Sheet 3.pdf`, T3.3, physical pp. 1–2.
 - `Problem sheets/Problem Sheet 4.pdf` and `Solutions to problem sheets/Solutions Sheet 4.pdf`, T4.1.
+- `Materials/Lecture notes.pdf`, Proposition 11.4 and Corollary 11.5, Eqs. (11.6)–(11.8), p. 78.

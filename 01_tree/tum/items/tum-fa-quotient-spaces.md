@@ -37,7 +37,31 @@ x=(x-f(x)y)+f(x)y\in\ker f\oplus\operatorname{span}\{y\}.
 \]
 If two continuous linear functionals have the same kernel, they are proportional; if both vanish the assertion is trivial. Thus the kernel determines a nonzero functional up to a scalar, not its normalization.
 
+## Dual of a subspace as a quotient
+
+For a closed subspace \(U\subset X\), write \(U^\perp=\{f\in X^*:f|_U=0\}\) for its annihilator in the dual (not an inner-product orthogonal complement). Restriction \(R:X^*\to U^*\) has this kernel and is surjective by Hahn–Banach. It induces a linear isometric isomorphism
+\[
+X^*/U^\perp\cong U^*.
+\]
+Indeed, all extensions of \(u^*\) form one coset, and its quotient norm is the infimum of their norms, equal to \(\|u^*\|\) with attainment by Hahn–Banach. This sharpens generic kernel factorization: equality of operator norms alone would not prove this induced map is an isometry.
+
+## Closed-range isomorphisms and the cokernel dual
+
+More generally, if bounded \(T:X\to Y\) vanishes on closed \(U\), it factors uniquely through \(X/U\) with equal operator norm. For Banach \(X,Y\) and closed \(T(X)\), bounded inverse applied to the kernel quotient gives
+\[
+X/\ker T\simeq T(X).
+\]
+Surjectivity gives \(X/\ker T\simeq Y\). These are topological isomorphisms, not generally isometries. Closedness is what upgrades the earlier injective factorization to a boundedly invertible map onto the range.
+
+For closed range, quotient composition \(g\mapsto gQ\) is an isometric isomorphism
+\[
+(Y/T(X))^*\cong\ker T^*.
+\]
+The functionals in the adjoint kernel are exactly those vanishing on the range, hence precisely those that descend to its quotient. This identifies the dual of the cokernel with the homogeneous adjoint solutions.
+
 ## Source references
 Archive: `00_sources/raw/tum/archives/Functional Anal 950763320 (W24_25)_20261012_1552.zip`. Lecture notes are WS 2017/18; exercise/solution sheets are WS 2024/25.
 - `Materials/Lecture notes.pdf`, Definition 1.13 and Proposition 1.14, pp. 12–14, including the evaluation quotient example.
 - `Problem sheets/Problem Sheet 2.pdf` and `Solutions to problem sheets/Solutions Sheet 2.pdf`, T2.4 and A2.2.
+- `Problem sheets/Problem Sheet 8.pdf` and `Solutions to problem sheets/Solutions Sheet 8.pdf`, T8.1.
+- `Materials/Lecture notes.pdf`, Proposition 10.1 and Corollaries 10.2–10.3, pp. 73–74; Proposition 10.4, p. 74.
