@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-second-order-penalty
 title: Lagrangian curvature on critical directions and local quadratic growth
 type: theorem
+caption: "Uses positive Lagrangian curvature on critical directions to prove local quadratic growth, including an example with a zero active gradient."
 ---
 
 # Lagrangian curvature on critical directions and local quadratic growth

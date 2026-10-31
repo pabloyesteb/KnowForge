@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-weak-compactness
 title: Weak and weak-star convergence through dual tests
 type: concept
+caption: "Characterizes weak limits by dual tests and boundedness, with mixed-pairing conditions and examples separating weak, weak-star and norm convergence."
 ---
 
 # Weak and weak-star convergence through dual tests

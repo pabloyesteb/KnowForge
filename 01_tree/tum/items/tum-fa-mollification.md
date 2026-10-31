@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-weak-compactness
 title: Convolution, mollification and translation continuity
 type: method
+caption: "Constructs smooth approximate identities, establishes finite-exponent approximation and translation continuity, and qualifies convolution differentiation."
 ---
 
 # Convolution, mollification and translation continuity

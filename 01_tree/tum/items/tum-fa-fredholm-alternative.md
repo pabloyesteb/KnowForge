@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-compact-fredholm
 title: Fredholm operators, index stability and compatibility conditions
 type: theorem
+caption: "Relates finite-dimensional defects and index stability to solvability and adjoint compatibility for identity-minus-compact equations."
 ---
 
 # Fredholm operators, index stability and compatibility conditions

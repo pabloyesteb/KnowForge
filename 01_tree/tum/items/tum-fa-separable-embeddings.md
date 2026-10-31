@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-fundamental-principles
 title: Countable norming families and separable-space embeddings
 type: method
+caption: "Constructs countable norming families and closed embeddings into bounded sequences, and proves that dual separability implies separability."
 ---
 
 # Countable norming families and separable-space embeddings

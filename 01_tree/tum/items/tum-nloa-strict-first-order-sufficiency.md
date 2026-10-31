@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-existence-geometry
 title: Strict tangent-direction positivity as a local sufficiency condition
 type: theorem
+caption: "Proves strict local minimality from positive gradient pairing with every nonzero tangent direction without assuming convexity."
 ---
 
 # Strict tangent-direction positivity as a local sufficiency condition

@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-hilbert-spaces
 title: Orthogonal complements, subspace projections and total sets
 type: theorem
+caption: "Connects closed-subspace projections and double orthogonal complements to totality and dense linear spans."
 ---
 
 # Orthogonal complements, subspace projections and total sets

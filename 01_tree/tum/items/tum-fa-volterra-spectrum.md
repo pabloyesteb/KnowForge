@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-spectral-theory
 title: Volterra integration and a spectral point without eigenvectors
 type: method
+caption: "Shows that Volterra integration has no eigenvalues despite a spectral point at zero and proves compactness on continuous functions."
 ---
 
 # Volterra integration and a spectral point without eigenvectors

@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-hilbert-spaces
 title: Hardy-space coefficient geometry and bounded point evaluation
 type: concept
+caption: "Builds a Hilbert space from square-summable power-series coefficients and represents interior evaluation by an explicit kernel."
 ---
 
 # Hardy-space coefficient geometry and bounded point evaluation

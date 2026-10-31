@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-sobolev-distributions
 title: Distributional derivatives and integrable weak derivatives
 type: concept
+caption: "Defines derivatives through test-function duality and distinguishes regular weak derivatives from singular derivatives such as point masses."
 ---
 
 # Distributional derivatives and integrable weak derivatives

@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-normed-spaces
 title: Evaluation functionals and bounded integral operators
 type: method
+caption: "Bounds evaluation and integration functionals and proves compactness of square-integrable-kernel maps using translation estimates."
 ---
 
 # Evaluation functionals and bounded integral operators

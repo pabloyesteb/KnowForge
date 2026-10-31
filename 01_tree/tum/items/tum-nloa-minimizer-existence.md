@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-existence-geometry
 title: Existence of constrained minimizers and the distinct roles of convexity
 type: theorem
+caption: "Uses compact sublevel sets to prove attainment and distinguishes strict-convexity uniqueness from strong-convexity coercivity."
 ---
 
 # Existence of constrained minimizers and the distinct roles of convexity

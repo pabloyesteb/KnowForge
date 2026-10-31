@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-cq-kkt
 title: MFCQ strict feasible directions and Slater points
 type: concept
+caption: "Connects strictly decreasing active-constraint directions to Slater points while keeping equality-gradient independence as a separate condition."
 ---
 
 # MFCQ strict feasible directions and Slater points

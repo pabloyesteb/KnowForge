@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-sqp-barrier
 title: Finite identification of the limiting active set in SQP
 type: theorem
+caption: "Proves eventual identification of the limiting QP active set under convergent SQP triples, positive step-size bounds and strict complementarity."
 ---
 
 # Finite identification of the limiting active set in SQP

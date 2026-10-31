@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-normed-spaces
 title: Representations of dual spaces
 type: theorem
+caption: "Constructs coefficient and integral representations of duals and explains their limits for bounded and convergent sequence spaces."
 ---
 
 # Representations of dual spaces

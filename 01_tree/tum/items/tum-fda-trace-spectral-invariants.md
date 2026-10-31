@@ -4,6 +4,7 @@ source: tum-foundations-data-analysis
 parent: fda-linear-geometry
 title: Cyclic trace and eigenvalue sums with multiplicity
 type: theorem
+caption: "Derives cyclic trace identities and explains why eigenvalue sums require algebraic multiplicities and remain invariant under basis changes."
 ---
 
 # Cyclic trace and eigenvalue sums with multiplicity

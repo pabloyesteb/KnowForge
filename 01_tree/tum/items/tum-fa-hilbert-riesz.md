@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-hilbert-spaces
 title: Riesz representation of Hilbert-space functionals
 type: theorem
+caption: "Represents each continuous Hilbert-space functional by a unique vector, preserving norms and the complex conjugate-linear convention."
 ---
 
 # Riesz representation of Hilbert-space functionals

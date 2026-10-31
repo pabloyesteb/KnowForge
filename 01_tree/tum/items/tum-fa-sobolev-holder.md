@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-sobolev-distributions
 title: One-dimensional Sobolev regularity and Hölder representatives
 type: theorem
+caption: "Derives a Hölder-continuous representative from one-dimensional weak-derivative control for integrability exponents strictly between one and infinity."
 ---
 
 # One-dimensional Sobolev regularity and Hölder representatives

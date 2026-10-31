@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-fundamental-principles
 title: Uniform boundedness of operator families
 type: theorem
+caption: "Uses Baire category to turn pointwise bounds on bounded-operator families over a Banach domain into a common operator-norm bound."
 ---
 
 # Uniform boundedness of operator families

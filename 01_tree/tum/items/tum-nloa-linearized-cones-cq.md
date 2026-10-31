@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-cq-kkt
 title: Linearized feasible cones, Abadie and Guignard qualifications
 type: concept
+caption: "Compares true and affine-model tangent cones and uses degenerate planar constraints to distinguish Abadie from Guignard qualification."
 ---
 
 # Linearized feasible cones, Abadie and Guignard qualifications

@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-weak-compactness
 title: Metric compactness, finite nets and tail control
 type: theorem
+caption: "Uses finite nets and uniform tail bounds to prove compactness and constructs bounded function sequences without norm-convergent subsequences."
 ---
 
 # Metric compactness, finite nets and tail control

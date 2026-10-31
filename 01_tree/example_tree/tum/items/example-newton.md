@@ -4,6 +4,7 @@ source: example-optimization
 parent: example-algorithms
 title: Newton's Method for Unconstrained Optimization
 type: algorithm
+caption: "Derives the Hessian-based update from a quadratic model and explains local convergence and globalization limitations."
 ---
 
 # Newton's Method for Unconstrained Optimization

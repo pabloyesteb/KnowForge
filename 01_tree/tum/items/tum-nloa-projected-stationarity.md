@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-existence-geometry
 title: Euclidean projection and projected-gradient stationarity
 type: method
+caption: "Characterizes constrained stationarity as a projected-gradient fixed point and identifies the convexity needed for global optimality."
 ---
 
 # Euclidean projection and projected-gradient stationarity

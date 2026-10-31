@@ -4,6 +4,7 @@ source: example-optimization
 parent: example-unconstrained
 title: Second-Order Sufficient Condition for a Strict Local Minimum
 type: theorem
+caption: "Explains why a stationary point with a positive-definite Hessian is a strict local minimum, without implying necessity."
 ---
 
 # Second-Order Sufficient Condition for a Strict Local Minimum

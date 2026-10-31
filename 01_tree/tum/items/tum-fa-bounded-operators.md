@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-normed-spaces
 title: Bounded linear operators and operator norms
 type: concept
+caption: "Connects linear continuity to uniform norm bounds and proves completeness of operator spaces when the codomain is Banach."
 ---
 
 # Bounded linear operators and operator norms

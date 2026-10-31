@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-second-order-penalty
 title: Stationary quadratic-penalty subproblems and limiting KKT multipliers
 type: algorithm
+caption: "Derives scaled-residual multiplier estimates and a limiting KKT pair under primal convergence, diverging penalties and equality LICQ."
 ---
 
 # Stationary quadratic-penalty subproblems and limiting KKT multipliers

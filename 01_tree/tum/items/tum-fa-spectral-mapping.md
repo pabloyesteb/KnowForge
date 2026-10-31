@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-spectral-theory
 title: Polynomial spectral mapping and commuting factorizations
 type: theorem
+caption: "Transfers complex polynomial factorization to commuting operator factors to identify the spectrum of a polynomial in an operator."
 ---
 
 # Polynomial spectral mapping and commuting factorizations

@@ -4,6 +4,7 @@ source: tum-foundations-data-analysis
 parent: fda-linear-geometry
 title: Finite orthogonal coordinates and Pythagoras–Fourier projection identities
 type: theorem
+caption: "Minimizes finite-basis approximation error by Fourier coefficients and derives projection-energy and residual identities."
 ---
 
 # Finite orthogonal coordinates and Pythagoras–Fourier projection identities

@@ -4,6 +4,7 @@ source: example-optimization
 parent: example-constrained
 title: Karush–Kuhn–Tucker Necessary Conditions
 type: theorem
+caption: "States constrained first-order stationarity, feasibility and complementarity under suitable constraint qualifications."
 ---
 
 # Karush–Kuhn–Tucker Necessary Conditions

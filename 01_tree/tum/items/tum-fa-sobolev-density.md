@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-sobolev-distributions
 title: Smooth approximation in Sobolev norms
 type: method
+caption: "Uses interior mollification and partitions of unity to approximate Sobolev functions smoothly while preserving distinctions about boundary conditions."
 ---
 
 # Smooth approximation in Sobolev norms

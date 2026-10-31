@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-spectral-theory
 title: Spectral decomposition and finite-rank approximation of compact normal maps
 type: theorem
+caption: "Expands compact normal maps in orthogonal eigenvectors and bounds finite-rank truncation errors by omitted eigenvalue magnitudes."
 ---
 
 # Spectral decomposition and finite-rank approximation of compact normal maps

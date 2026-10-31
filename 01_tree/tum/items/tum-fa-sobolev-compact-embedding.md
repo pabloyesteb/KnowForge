@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-sobolev-distributions
 title: Translation estimates and Rellich compact embedding
 type: theorem
+caption: "Uses gradient-controlled translations and extension operators to obtain strong subsequences from bounded Sobolev families on suitable bounded domains."
 ---
 
 # Translation estimates and Rellich compact embedding

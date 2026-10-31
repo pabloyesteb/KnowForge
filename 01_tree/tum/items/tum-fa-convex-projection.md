@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-hilbert-spaces
 title: Projection onto closed convex sets in Hilbert spaces
 type: theorem
+caption: "Proves nearest-point existence and uniqueness in Hilbert spaces and characterizes projections by a variational inequality."
 ---
 
 # Projection onto closed convex sets in Hilbert spaces

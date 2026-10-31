@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-fundamental-principles
 title: Baire category and the obstruction to countable-dimensional Banach spaces
 type: theorem
+caption: "Uses dense-open intersections in complete metric spaces to rule out countably infinite algebraic bases for Banach spaces."
 ---
 
 # Baire category and the obstruction to countable-dimensional Banach spaces

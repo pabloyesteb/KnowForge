@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-hilbert-spaces
 title: Orthonormal bases, Fourier expansions and Hilbert coordinates
 type: theorem
+caption: "Develops Bessel and Parseval identities, Hilbert coefficient isomorphisms and Fourier examples while distinguishing orthonormality from completeness."
 ---
 
 # Orthonormal bases, Fourier expansions and Hilbert coordinates

@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-cq-kkt
 title: Preserving LICQ when introducing nonnegative slack variables
 type: theorem
+caption: "Proves that replacing inequalities by equalities with ordinary nonnegative slacks preserves independence of active constraint gradients."
 ---
 
 # Preserving LICQ when introducing nonnegative slack variables

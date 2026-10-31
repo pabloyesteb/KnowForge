@@ -12,8 +12,8 @@ from unittest.mock import patch
 
 import yaml
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "scripts/codex-helpers"))
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts"))
 import tree
 import tree_html
 
@@ -114,7 +114,7 @@ class TreeTests(unittest.TestCase):
             "source: sample-course\nnodes:\n  - id: section\n    title: Section\n    parent: null\n")
         item = category / "items/sample-item.md"
         item.write_text("---\nid: sample-item\nsource: sample-course\nparent: section\n"
-                        "title: A substantive Item\ntype: other\n---\n\nContent.\n")
+                        "title: A substantive Item\ntype: other\ncaption: Describes the example content.\n---\n\nContent.\n")
         trees, items = tree.load_tree(self.root, False)
         self.assertEqual((trees[0].category, items[0].category, items[0].type),
                          ("field-research", "field-research", "other"))
@@ -200,6 +200,30 @@ class TreeTests(unittest.TestCase):
         self.item.write_text(self.item.read_text().split("\n---\n", 1)[0] + "\n---\n")
         self.assertEqual(len(tree.load_tree(self.root, True)[1]), 4)
 
+    def test_caption_is_required_and_nonempty(self):
+        original = self.item.read_text()
+        for value in (None, "", "   ", 42):
+            with self.subTest(caption=value):
+                front, body = original.split("\n---\n", 1)
+                metadata = yaml.safe_load(front[4:])
+                if value is None:
+                    del metadata["caption"]
+                else:
+                    metadata["caption"] = value
+                self.item.write_text("---\n" + yaml.safe_dump(metadata) + "---\n" + body)
+                with self.assertRaisesRegex(ValueError, "caption"):
+                    tree.load_tree(self.root, True)
+
+    def test_captions_displayed_and_escaped(self):
+        trees, items = tree.load_tree(self.root, True)
+        items[0].caption = 'Explains <script>alert("caption")</script> safely.'
+        page = tree_html.render_page(trees, items, True)
+        self.assertEqual(page.count('class="caption"'), 2 * len(items))
+        self.assertEqual(page.count('Explains &lt;script&gt;alert(&quot;caption&quot;)&lt;/script&gt; safely.'), 2)
+        self.assertNotIn('<script>alert("caption")</script>', page)
+        for item in items[1:]:
+            self.assertEqual(page.count(item.caption), 2)
+
     def test_markdown_math_and_safe_html(self):
         text = tree_html.render_markdown('Before $x^2$ and \\(y>0\\) after. `$code$`\n\n'
                                         '$$\nx+y\n$$\n\n| A | B |\n|---|---|\n| 1 | 2 |\n\n'
@@ -247,7 +271,7 @@ class TreeTests(unittest.TestCase):
         self.assertEqual(output.read_text(), page)
         self.edit(self.item, "type: theorem", "type: invalid")
         stderr = io.StringIO()
-        with patch.object(tree, "__file__", str(self.root / "scripts/codex-helpers/tree.py")), \
+        with patch.object(tree, "__file__", str(self.root / "scripts/tree.py")), \
                 patch.object(sys, "argv", ["tree.py", "render", "--examples"]), redirect_stderr(stderr):
             self.assertEqual(tree.main(), 1)
         self.assertIn(str(self.item), stderr.getvalue())
@@ -267,7 +291,7 @@ class TreeTests(unittest.TestCase):
         self.assertEqual(output.read_text(), "previous viewer")
 
     def test_cli_from_other_working_directory(self):
-        result = subprocess.run([sys.executable, str(ROOT / "scripts/codex-helpers/tree.py"),
+        result = subprocess.run([sys.executable, str(ROOT / "scripts/tree.py"),
                                  "validate", "--examples"], cwd=self.root, capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("4 Items", result.stdout)

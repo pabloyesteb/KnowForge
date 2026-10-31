@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-second-order-penalty
 title: Local exact penalties and their differentiability obstruction
 type: theorem
+caption: "Shows that local exactness persists above a penalty threshold and explains why smooth nonnegative penalties cannot handle nonstationary constrained optima exactly."
 ---
 
 # Local exact penalties and their differentiability obstruction

@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-sobolev-distributions
 title: Test functions and distributions as generalized functions
 type: concept
+caption: "Defines test-function convergence and continuous linear distributions, distinguishing integrable densities from singular point evaluations."
 ---
 
 # Test functions and distributions as generalized functions

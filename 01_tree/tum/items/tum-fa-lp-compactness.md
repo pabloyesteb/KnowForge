@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-weak-compactness
 title: Fréchet–Riesz–Kolmogorov compactness in finite-exponent spaces
 type: theorem
+caption: "Characterizes relative compactness on bounded domains through boundedness and uniform translation control at finite integrability exponents."
 ---
 
 # Fréchet–Riesz–Kolmogorov compactness in finite-exponent spaces

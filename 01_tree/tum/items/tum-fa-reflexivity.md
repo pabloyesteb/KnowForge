@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-fundamental-principles
 title: Canonical bidual embedding, reflexivity and norm attainment
 type: theorem
+caption: "Studies the canonical bidual embedding, stability of reflexivity and norm attainment, with explicit nonreflexive sequence and function spaces."
 ---
 
 # Canonical bidual embedding, reflexivity and norm attainment

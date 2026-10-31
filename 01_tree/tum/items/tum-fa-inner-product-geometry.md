@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-hilbert-spaces
 title: Inner-product geometry and Hilbert norms
 type: concept
+caption: "Derives Cauchy–Schwarz, polarization and parallelogram identities and distinguishes Hilbert norms from general sequence-space norms."
 ---
 
 # Inner-product geometry and Hilbert norms

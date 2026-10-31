@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-normed-spaces
 title: Norm equivalence and isomorphisms of normed spaces
 type: concept
+caption: "Distinguishes equivalent norms and bounded isomorphisms from merely algebraic bijections using weighted sequence-space counterexamples."
 ---
 
 # Norm equivalence and isomorphisms of normed spaces

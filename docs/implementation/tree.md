@@ -22,7 +22,7 @@ Use three simple `dataclasses` without behavior:
 
 - `Node(id, title, parent)`: a TreeNode; `parent` is a Node ID or `None`.
 - `SourceTree(source, title, category, nodes, path)`: one Source tree, its display title, directory category, ordered Nodes and YAML path.
-- `Item(id, source, parent, title, type, body, category, path)`: one Markdown Item, including its original Markdown body, category and file path.
+- `Item(id, source, parent, title, type, caption, body, category, path)`: one Markdown Item, including its original Markdown body, category and file path.
 
 `category` and `path` on loaded objects are **internal context**, not new YAML/frontmatter fields. No `Dataset`, `Diagnostic`, inheritance hierarchy or persistent index is needed.
 
@@ -38,11 +38,11 @@ Discover immediate category directories under `base` that contain both `trees/` 
 
 ### `load_items(base)`
 
-Use the same immediate category discovery as `load_trees()` and read each category's `items/*.md`. Parse the five required frontmatter fields, retain the Markdown body unchanged, and return `list[Item]`. Preserve each file's category and path for validation and useful error messages. Do not judge prose, references or technical content.
+Use the same immediate category discovery as `load_trees()` and read each category's `items/*.md`. Parse the six required frontmatter fields (including a nonempty string `caption`), retain the Markdown body unchanged, and return `list[Item]`. Preserve each file's category and path for validation and useful error messages. Do not judge prose, references or technical content.
 
 ### `validate(trees, items)`
 
-Check the structural rules in [`../01_tree.md`](../01_tree.md): unique IDs, matching file stems, same-category placement of a Source tree and its Items, valid parent references, acyclic Node relationships and allowed Item types, including `other`. Reject malformed required fields. Stop at the first error with `ValueError` mentioning the affected file and reason. Empty production data and Nodes without Items are valid. Do not add automated editorial or evidence-quality checks.
+Check the structural rules in [`../01_tree.md`](../01_tree.md): unique IDs, matching file stems, same-category placement of a Source tree and its Items, valid parent references, acyclic Node relationships and allowed Item types, including `other`. Reject malformed required fields, including missing, blank or non-string captions. Stop at the first error with `ValueError` mentioning the affected file and reason. Empty production data and Nodes without Items are valid. Do not add automated editorial or evidence-quality checks.
 
 ### `load_tree(root, examples)`
 
@@ -60,11 +60,11 @@ Convert Item Markdown to readable HTML, supporting headings, lists, tables, code
 
 ### `render_navigation(trees, items)`
 
-Build the virtual `Career Profile → Category → Source → TreeNode → Item` navigation, grouping loaded Sources by their discovered categories. Humanize directory names for category headings. Preserve YAML order for sibling Nodes; use a deterministic order for sibling Items. Escape displayed text. Return an HTML fragment; do not write files or modify the input objects.
+Build the virtual `Career Profile → Category → Source → TreeNode → Item` navigation, grouping loaded Sources by their discovered categories. Humanize directory names for category headings. Preserve YAML order for sibling Nodes; use a deterministic order for sibling Items. Display each escaped caption beneath its Item title, alongside the type. Return an HTML fragment; do not write files or modify the input objects.
 
 ### `render_page(trees, items, examples)`
 
-Assemble one self-contained HTML document with navigation, an Item reading panel, title search, Item type display and a clear empty state. Include only small local CSS/JavaScript for interaction. The viewer is read-only and works offline without a server or CDN.
+Assemble one self-contained HTML document with navigation, an Item reading panel, title search, Item type and caption display and a clear empty state. Include only small local CSS/JavaScript for interaction. The viewer is read-only and works offline without a server or CDN.
 
 ### `write_html(html, path)`
 

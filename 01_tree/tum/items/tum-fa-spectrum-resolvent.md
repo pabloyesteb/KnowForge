@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-spectral-theory
 title: Resolvent expansions and the different kinds of spectrum
 type: concept
+caption: "Classifies spectral points, constructs local inverse expansions and uses approximate eigenvectors to diagnose failure of bounded invertibility."
 ---
 
 # Resolvent expansions and the different kinds of spectrum

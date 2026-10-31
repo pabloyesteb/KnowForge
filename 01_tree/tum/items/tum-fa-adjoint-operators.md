@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-compact-fredholm
 title: Banach and Hilbert adjoints, annihilators and compactness
 type: theorem
+caption: "Relates dual composition and Hilbert adjoints to annihilators, range closures, kernel identities and preservation of compactness."
 ---
 
 # Banach and Hilbert adjoints, annihilators and compactness

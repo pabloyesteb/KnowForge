@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-normed-spaces
 title: Banach-space series and Neumann inversion
 type: method
+caption: "Uses absolutely convergent Banach-space series to invert small operator perturbations and solve a concrete integral equation."
 ---
 
 # Banach-space series and Neumann inversion

@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-weak-compactness
 title: Arzelà–Ascoli compactness and continuous-kernel operators
 type: theorem
+caption: "Characterizes compact closure of bounded equicontinuous families on compact domains and applies it to continuous-kernel operators."
 ---
 
 # Arzelà–Ascoli compactness and continuous-kernel operators

@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-fundamental-principles
 title: Open mapping and the bounded inverse theorem
 type: theorem
+caption: "Proves openness of bounded Banach-space surjections and obtains bounded inverses and consequences for complete norms."
 ---
 
 # Open mapping and the bounded inverse theorem

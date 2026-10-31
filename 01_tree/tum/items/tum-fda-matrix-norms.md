@@ -4,6 +4,7 @@ source: tum-foundations-data-analysis
 parent: fda-linear-geometry
 title: Frobenius and spectral matrix norms
 type: concept
+caption: "Contrasts entrywise Euclidean size with maximum amplification and computes a diagonal spectral norm through constrained stationarity."
 ---
 
 # Frobenius and spectral matrix norms

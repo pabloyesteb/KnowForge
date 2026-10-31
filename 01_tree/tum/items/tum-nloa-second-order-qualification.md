@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-second-order-penalty
 title: Why second-order necessity requires an appropriate curve qualification
 type: method
+caption: "Constructs a degenerate minimum where a required boundary arc does not exist and a KKT multiplier gives an indefinite Lagrangian Hessian."
 ---
 
 # Why second-order necessity requires an appropriate curve qualification

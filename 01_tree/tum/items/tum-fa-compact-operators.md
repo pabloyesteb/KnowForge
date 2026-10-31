@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-compact-fredholm
 title: Compact operators, weak-to-strong continuity and norm approximation
 type: theorem
+caption: "Establishes sequential compactness criteria, weak-to-strong mapping and norm-closedness, with finite-rank and sequence-space examples."
 ---
 
 # Compact operators, weak-to-strong continuity and norm approximation

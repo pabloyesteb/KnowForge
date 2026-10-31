@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-cq-kkt
 title: KKT conditions and first-order directional stationarity
 type: concept
+caption: "Relates Lagrangian stationarity and complementarity to directional optimality, with convex sufficiency and strict-convexity primal uniqueness."
 ---
 
 # KKT conditions and first-order directional stationarity

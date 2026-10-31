@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-normed-spaces
 title: Density, separability and coordinate expansions
 type: concept
+caption: "Uses finite-coordinate approximation to distinguish separable sequence spaces from the nonseparable space of bounded sequences."
 ---
 
 # Density, separability and coordinate expansions

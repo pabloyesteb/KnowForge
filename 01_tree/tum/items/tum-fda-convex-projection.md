@@ -4,6 +4,7 @@ source: tum-foundations-data-analysis
 parent: fda-linear-geometry
 title: Hilbert projection onto closed convex sets
 type: theorem
+caption: "Uses minimizing Cauchy sequences to obtain unique Hilbert projections and derives the Euclidean ball formula and its sphere limitation."
 ---
 
 # Hilbert projection onto closed convex sets

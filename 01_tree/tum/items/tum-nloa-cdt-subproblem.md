@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-cq-kkt
 title: KKT formulation of the Celis–Dennis–Tapia two-constraint subproblem
 type: method
+caption: "Establishes Slater feasibility and derives KKT equations for a quadratic model with trust-region and residual-norm constraints."
 ---
 
 # KKT formulation of the Celis–Dennis–Tapia two-constraint subproblem

@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-fundamental-principles
 title: Closed graph theorem and differentiation on an incomplete domain
 type: theorem
+caption: "Derives boundedness from a closed graph on Banach domains and contrasts it with differentiation on an incomplete domain."
 ---
 
 # Closed graph theorem and differentiation on an incomplete domain

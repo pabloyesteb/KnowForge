@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-weak-compactness
 title: Weak and weak-star compactness and subsequence extraction
 type: theorem
+caption: "Separates weak-star topological compactness from sequential results and derives subsequence extraction using separability or reflexivity."
 ---
 
 # Weak and weak-star compactness and subsequence extraction

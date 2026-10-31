@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-sqp-barrier
 title: Logarithmic barrier continuation and convergence of global subproblem solutions
 type: algorithm
+caption: "Proves monotonic comparisons and optimal accumulation points for globally solved barrier subproblems when the strict interior is dense in the feasible set."
 ---
 
 # Logarithmic barrier continuation and convergence of global subproblem solutions

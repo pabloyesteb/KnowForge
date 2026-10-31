@@ -4,6 +4,7 @@ source: tum-foundations-data-analysis
 parent: fda-linear-geometry
 title: Cauchy sequences, metric completeness and an integral-distance counterexample
 type: concept
+caption: "Contrasts convergence of a diagonal iteration with continuous functions whose integral-distance Cauchy limit lies outside the space."
 ---
 
 # Cauchy sequences, metric completeness and an integral-distance counterexample

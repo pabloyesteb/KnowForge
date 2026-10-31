@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-spectral-theory
 title: Compact-operator SVD, optimal rank approximation and perturbation bounds
 type: theorem
+caption: "Constructs compact-operator singular systems and derives optimal low-rank errors and perturbation bounds for singular values."
 ---
 
 # Compact-operator SVD, optimal rank approximation and perturbation bounds

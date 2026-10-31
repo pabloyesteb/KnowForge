@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-existence-geometry
 title: Tangent cones and convex feasible directions
 type: theorem
+caption: "Represents convex tangent cones by closures of rescaled feasible displacements and establishes closedness, conic structure and interior-point behavior."
 ---
 
 # Tangent cones and convex feasible directions

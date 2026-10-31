@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-hilbert-spaces
 title: Distance from subspaces and noncompact unit balls
 type: theorem
+caption: "Constructs unit vectors separated from proper closed subspaces and proves that compact unit balls characterize finite dimension."
 ---
 
 # Distance from subspaces and noncompact unit balls

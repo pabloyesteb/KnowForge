@@ -4,6 +4,7 @@ source: tum-foundations-data-analysis
 parent: fda-linear-geometry
 title: Convex combinations and feasible-set geometry
 type: concept
+caption: "Extends segment convexity to finite combinations and contrasts affine feasible geometry with nonlinearity of rank-constrained matrix sets."
 ---
 
 # Convex combinations and feasible-set geometry

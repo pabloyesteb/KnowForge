@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-weak-compactness
 title: Best approximation via reflexivity and strict convexity
 type: theorem
+caption: "Uses bounded minimizing sequences, weak closedness and lower semicontinuity for existence, with strict convexity separately ensuring uniqueness."
 ---
 
 # Best approximation via reflexivity and strict convexity

@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-spectral-theory
 title: Shift operators and dependence of spectral type on the ambient space
 type: method
+caption: "Computes shift spectra and shows how summability requirements change whether spectral points are eigenvalues or continuous-spectrum values."
 ---
 
 # Shift operators and dependence of spectral type on the ambient space

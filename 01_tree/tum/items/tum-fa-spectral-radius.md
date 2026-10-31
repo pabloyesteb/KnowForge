@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-spectral-theory
 title: Spectral radius and asymptotic operator-power growth
 type: theorem
+caption: "Identifies spectral radius with asymptotic operator-power growth using spectral mapping and scalar resolvent expansions."
 ---
 
 # Spectral radius and asymptotic operator-power growth

@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-cq-kkt
 title: Boundedness, nonuniqueness and strict complementarity of KKT multipliers
 type: theorem
+caption: "Proves multiplier boundedness under MFCQ and uniqueness under LICQ, contrasting these with a nonunique segment and triple-dependent strict complementarity."
 ---
 
 # Boundedness, nonuniqueness and strict complementarity of KKT multipliers

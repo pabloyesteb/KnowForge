@@ -30,7 +30,7 @@ Node-parent relationships form an acyclic forest within each Source; multiple `p
 
 An Item is a **coherent, independently useful unit of technical knowledge or experience** grounded in exactly one Source and assigned to exactly one primary TreeNode. It may describe a theorem, concept, algorithm, method, implementation, experiment or technical result. A single Item may contain supporting statements, derivations, assumptions, examples, limitations and routine corollaries: independence, not shortness, determines its boundary.
 
-Every Item is a standalone Markdown file with five required YAML frontmatter fields:
+Every Item is a standalone Markdown file with six required YAML frontmatter fields:
 
 | Field | Meaning |
 | --- | --- |
@@ -39,6 +39,7 @@ Every Item is a standalone Markdown file with five required YAML frontmatter fie
 | `parent` | Primary TreeNode ID in that Source |
 | `title` | Meaningful, human-readable title |
 | `type` | Dominant nature of the knowledge represented |
+| `caption` | One concise sentence describing the specific knowledge covered, readable alongside title and type |
 
 Item IDs remain stable across file moves or TreeNode reorganizations. In particular, Item identity must not depend on the `parent` path. Use human-readable IDs with a simple portable convention (lowercase ASCII letters, digits and hyphens); do not introduce opaque UUIDs or path-derived identifiers.
 
@@ -141,6 +142,7 @@ source: example-optimization
 parent: example-constrained
 title: Karush–Kuhn–Tucker Necessary Conditions
 type: theorem
+caption: States constrained stationarity, feasibility and complementarity under suitable constraint qualifications.
 ---
 
 # Karush–Kuhn–Tucker Necessary Conditions
@@ -179,6 +181,7 @@ source: example-optimization
 parent: example-algorithms
 title: Newton's Method for Unconstrained Optimization
 type: algorithm
+caption: Derives the Hessian-based update and explains local convergence and globalization limitations.
 ---
 
 # Newton's Method for Unconstrained Optimization

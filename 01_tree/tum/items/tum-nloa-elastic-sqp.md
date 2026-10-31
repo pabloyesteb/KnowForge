@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-sqp-barrier
 title: Elastic SQP feasibility restoration and equivalent l1 model penalties
 type: method
+caption: "Restores feasibility of linearized constraint models with nonnegative violation variables and eliminates them into positive-part and absolute-value penalties."
 ---
 
 # Elastic SQP feasibility restoration and equivalent l1 model penalties

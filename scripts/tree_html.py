@@ -71,6 +71,7 @@ def render_navigation(trees, items):
                     for item in sorted(placements[node.id], key=lambda i: (i.title.casefold(), i.id)):
                         html.append(f'<button class="item" type="button" data-item="{escape(item.id, quote=True)}" '
                                     f'data-title="{escape(item.title, quote=True)}">{escape(item.title)}'
+                                    f'<span class="caption">{escape(item.caption)}</span>'
                                     f'<small>{escape(item.type)}</small></button>')
                     nodes(node.id)
                     html.append("</details>")
@@ -91,6 +92,7 @@ nav{height:100vh;overflow:auto;position:sticky;top:0;padding:1rem;border-right:1
 main{padding:2rem;max-width:1100px;min-width:0}details details{margin-left:.8rem}summary{cursor:pointer;padding:.3rem 0}
 button.item{display:block;width:100%;border:0;background:none;text-align:left;padding:.5rem;cursor:pointer;color:inherit}
 button.item:hover,button.item[aria-current=true]{background:#e4edf7}small{display:block;opacity:.7}
+.caption{display:block;font-size:.85rem;font-weight:normal;color:#54616e}
 input{width:100%;padding:.6rem;font:inherit}.meta,#status{font-size:.85rem;color:#54616e}
 pre,.math.block{overflow:auto;padding:.5rem}pre{background:#f2f4f7}code{font-family:monospace}
 table{border-collapse:collapse;display:block;overflow:auto}td,th{border:1px solid #ccc;padding:.4rem}
@@ -128,6 +130,7 @@ def render_page(trees, items, examples):
             raise ValueError(f"{item.path}: Markdown rendering failed: {error}") from error
         articles.append(f'<article data-item="{escape(item.id, quote=True)}" hidden>'
                         f'<p class="meta">{escape(item.title)} · {escape(item.source)} · Type: {escape(item.type)}</p>'
+                        f'<p class="caption">{escape(item.caption)}</p>'
                         f'{content}</article>')
     message = "Select an Item to read it." if items else "No Items yet. The dataset is empty."
     return f'''<!doctype html>

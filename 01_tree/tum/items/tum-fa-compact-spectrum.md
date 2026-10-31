@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-spectral-theory
 title: Compact-operator spectra and spectral effects of compact perturbations
 type: theorem
+caption: "Derives finite-multiplicity nonzero eigenvalues, accumulation only at zero and spectral agreement outside eigenvalues under compact perturbations."
 ---
 
 # Compact-operator spectra and spectral effects of compact perturbations

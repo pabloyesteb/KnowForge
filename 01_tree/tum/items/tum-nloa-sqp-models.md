@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-sqp-barrier
 title: SQP quadratic models, feasibility and exact quadratic special cases
 type: algorithm
+caption: "Builds quadratic Lagrangian models with affine constraints and analyzes infeasibility, exact convex-QP steps and an equality Newton example."
 ---
 
 # SQP quadratic models, feasibility and exact quadratic special cases

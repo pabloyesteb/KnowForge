@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-existence-geometry
 title: Variational inequalities for constrained first-order optimality
 type: theorem
+caption: "Derives nonnegative gradient pairings along feasible segments and shows their global sufficiency when the objective is convex."
 ---
 
 # Variational inequalities for constrained first-order optimality

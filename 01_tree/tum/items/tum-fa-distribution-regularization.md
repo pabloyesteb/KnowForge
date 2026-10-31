@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-sobolev-distributions
 title: Smooth regularization of distributions
 type: method
+caption: "Approximates arbitrary distributions by smooth convolutions and tracks the limits of their derivatives, including Dirac examples."
 ---
 
 # Smooth regularization of distributions

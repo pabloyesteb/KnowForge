@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-normed-spaces
 title: Normed spaces, completeness and function-space examples
 type: concept
+caption: "Develops norm completeness through sequence and function spaces, with examples distinguishing completeness from other topological properties."
 ---
 
 # Normed spaces, completeness and function-space examples

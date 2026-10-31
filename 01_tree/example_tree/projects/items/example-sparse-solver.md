@@ -4,6 +4,7 @@ source: example-research-project
 parent: example-project-solvers
 title: Sparse Linear System Solver Integration
 type: implementation
+caption: "Illustrates a fictional sparse-solver integration with matrix contracts, factorization reuse and explicit failure handling."
 ---
 
 # Sparse Linear System Solver Integration

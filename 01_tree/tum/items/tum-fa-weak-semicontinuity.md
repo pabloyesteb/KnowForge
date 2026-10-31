@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-weak-compactness
 title: Weak lower semicontinuity and convex closedness
 type: theorem
+caption: "Proves weak lower semicontinuity of norms and support functionals and weak sequential closedness of norm-closed convex sets."
 ---
 
 # Weak lower semicontinuity and convex closedness

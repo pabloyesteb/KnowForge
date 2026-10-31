@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-fundamental-principles
 title: Minkowski functionals and separation of convex sets
 type: theorem
+caption: "Builds sublinear gauges from convex sets and uses them to separate points and convex sets under precise openness or closedness assumptions."
 ---
 
 # Minkowski functionals and separation of convex sets

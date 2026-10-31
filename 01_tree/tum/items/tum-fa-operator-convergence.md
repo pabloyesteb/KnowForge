@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-normed-spaces
 title: Pointwise versus operator-norm convergence
 type: concept
+caption: "Separates pointwise from operator-norm convergence and uses uniform boundedness to control pointwise limits on Banach domains."
 ---
 
 # Pointwise versus operator-norm convergence

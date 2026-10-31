@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-sobolev-distributions
 title: Sobolev spaces as closed derivative graphs in product spaces
 type: concept
+caption: "Constructs complete weak-derivative spaces as closed product-space subspaces and derives reflexivity, separability and Hilbert special cases."
 ---
 
 # Sobolev spaces as closed derivative graphs in product spaces

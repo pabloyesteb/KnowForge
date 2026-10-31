@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-spectral-theory
 title: Normal, self-adjoint and positive Hilbert-space operators
 type: theorem
+caption: "Derives adjoint norm identities, orthogonality of normal eigenspaces and spectral consequences of normality and self-adjointness."
 ---
 
 # Normal, self-adjoint and positive Hilbert-space operators

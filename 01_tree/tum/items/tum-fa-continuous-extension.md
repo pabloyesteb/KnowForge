@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-normed-spaces
 title: Continuous extension of bounded operators from dense subspaces
 type: theorem
+caption: "Extends bounded linear maps uniquely from dense subspaces into Banach codomains while preserving the operator norm."
 ---
 
 # Continuous extension of bounded operators from dense subspaces

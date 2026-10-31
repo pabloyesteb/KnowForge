@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-normed-spaces
 title: Quotient norms and factorization through kernels
 type: theorem
+caption: "Constructs complete quotient spaces and relates kernel factorization, closed-range isomorphisms and duals of subspaces and cokernels."
 ---
 
 # Quotient norms and factorization through kernels

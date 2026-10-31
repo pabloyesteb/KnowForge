@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-compact-fredholm
 title: Complemented Banach subspaces and bounded projections
 type: theorem
+caption: "Distinguishes algebraic complements from closed Banach decompositions and constructs bounded projections in finite-dimensional cases."
 ---
 
 # Complemented Banach subspaces and bounded projections

@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-fundamental-principles
 title: Hahn–Banach extension and norming functionals
 type: theorem
+caption: "Extends dominated linear functionals without increasing their norm and derives norming functionals and minimal-extension properties."
 ---
 
 # Hahn–Banach extension and norming functionals

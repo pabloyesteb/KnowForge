@@ -36,6 +36,7 @@ class Item:
     parent: str
     title: str
     type: str
+    caption: str
     body: str
     category: str
     path: Path
@@ -117,7 +118,7 @@ def load_items(base):
             if frontmatter is None:
                 raise ValueError(f"{path}: expected YAML frontmatter between --- delimiters")
             record = _yaml(frontmatter[1], path)
-            _fields(record, ("id", "source", "parent", "title", "type"), path)
+            _fields(record, ("id", "source", "parent", "title", "type", "caption"), path)
             items.append(Item(**record, body=text[frontmatter.end():], category=category.name, path=path))
     return items
 
@@ -154,7 +155,7 @@ def validate(trees, items):
         sources[tree.source] = (tree, nodes)
     identifiers = set()
     for item in items:
-        _strings(item.path, id=item.id, source=item.source, parent=item.parent, title=item.title, type=item.type)
+        _strings(item.path, id=item.id, source=item.source, parent=item.parent, title=item.title, type=item.type, caption=item.caption)
         if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", item.id):
             raise ValueError(f"{item.path}: invalid Item ID {item.id!r}; use lowercase letters, digits and hyphens")
         if item.path.stem != item.id:
@@ -192,7 +193,7 @@ def main():
         command = commands.add_parser(name)
         command.add_argument("--examples", action="store_true", help="use only isolated example fixtures")
     args = parser.parse_args()
-    root = Path(__file__).resolve().parents[2]
+    root = Path(__file__).resolve().parents[1]
     try:
         trees, items = load_tree(root, args.examples)
         if args.command == "render":

@@ -4,6 +4,7 @@ source: tum-nonlinear-optimization
 parent: nloa-second-order-penalty
 title: Augmented-Lagrangian local exactness through Debreu's lemma
 type: method
+caption: "Uses equality-tangent curvature and Debreu’s lemma to prove local unconstrained exactness at the correct multiplier for large finite penalties."
 ---
 
 # Augmented-Lagrangian local exactness through Debreu's lemma

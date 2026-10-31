@@ -4,6 +4,7 @@ source: tum-functional-analysis
 parent: fa-spectral-theory
 title: Diagonal multiplication, eigenvalues and spectral limit points
 type: method
+caption: "Computes diagonal spectra from coefficient closures and relates eigenvalue multiplicity and truncation convergence to coefficient behavior."
 ---
 
 # Diagonal multiplication, eigenvalues and spectral limit points
