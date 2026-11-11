@@ -19,9 +19,12 @@ The traveling-salesman independence family consists of edge sets contained in so
 
 These failures concern the displayed feasible-set systems. They do not say every instance lacks a greedy optimum, only that the matroid theorem cannot promise success for every objective weight.
 
+Stable vertex sets give another hereditary nonmatroid family. On the three-vertex path, \(\{v_2\}\) and \(\{v_1,v_3\}\) are stable, but neither endpoint can augment the middle singleton. The ground set here is the vertex set, correcting the solution's incidental use of \(E\).
+
 ## Source references
 
 Archive: `00_sources/raw/tum/archives/Combinatorial O 950730014 (S24)_20261012_1548.zip`.
 - `Lecture Notes/lecture notes.pdf`, Example 2.18 and Figure 12, p. 19, clique obstruction.
 - `Lecture Notes/class notes for 03 May.pdf`, physical pp. 11–13, knapsack capacity-10 example and different-sized bases.
 - `Problem Sheets/Exercise Sheet 3/exercise_sheet_3.pdf`, Exercise 2(a–c), p. 1; `Problem Sheets/Exercise Sheet 3 - solutions/exercise_sheet_3 - sol.pdf`, corresponding augmentation counterexamples, p. 2.
+- `Student Submitted Exercises/Leon Holtkamp.pdf`, pp. 1–2, complete stable-set question and path counterexample.

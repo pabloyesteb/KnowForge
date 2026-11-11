@@ -22,9 +22,12 @@ The exchange arguments explain necessity: replacing a more expensive tree edge o
 
 The MST formulation permits negative costs even though the algorithm boxes restrict inputs to nonnegative costs: shifting every cost by the same constant leaves the ordering and every spanning-tree comparison unchanged, since all trees have \(n-1\) edges. Likewise \(c'(e)=M-c(e)\), with \(M>\max_e c(e)\), turns minimization into positive-weight maximization because \(c'(T)=(n-1)M-c(T)\). This fixed-cardinality argument does not apply to arbitrary feasible sets of different sizes.
 
+A maximum-weight edge of any cycle can be deleted while preserving at least one MST. If an optimum uses it, delete it to form a fundamental cut and choose another edge of that cycle crossing this cut. Its weight is no larger, and exchanging restores a spanning tree of optimal cost. An arbitrary other cycle edge need not reconnect the cut; the supplement's replacement step needs that choice. Ties allow the deleted edge to belong to some other optimum.
+
 ## Source references
 
 Archive: `00_sources/raw/tum/archives/Combinatorial O 950730014 (S24)_20261012_1548.zip`.
 - `Lecture Notes/lecture notes.pdf`, §§2.1–2.2, pp. 10–14, Definitions 2.1–2.3 and Theorem 2.4 with proof; Remark 2.9, p. 16.
 - `Lecture Notes/class notes for 26 April.pdf`, physical pp. 1–17, tree definitions, complete MST characterization/exchange proof and cut/cycle diagrams.
 - `Lecture Notes/class notes for 03 May.pdf`, physical p. 3, maximization transformation.
+- `Student Submitted Exercises/Saghar Rezaei .pdf`, p. 1(a), cycle-edge deletion statement, exchange proof and diagrams.

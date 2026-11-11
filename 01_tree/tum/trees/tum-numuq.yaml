@@ -1,0 +1,23 @@
+source: tum-numuq
+nodes:
+- id: uq-probability
+  title: Uncertainty models and probability in function spaces
+  parent: null
+- id: uq-random-fields
+  title: Random fields and sample-path regularity
+  parent: null
+- id: uq-discretization
+  title: Random-field discretization and Karhunen–Loève expansions
+  parent: null
+- id: uq-pde
+  title: Deterministic and random elliptic PDEs
+  parent: null
+- id: uq-monte-carlo
+  title: Monte Carlo and variance reduction
+  parent: null
+- id: uq-multilevel
+  title: Multilevel and multifidelity estimators
+  parent: null
+- id: uq-stochastic-galerkin
+  title: Stochastic Galerkin approximation
+  parent: null

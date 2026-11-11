@@ -22,3 +22,4 @@ The system is accessed through an independence oracle rather than an explicit li
 Archive: `00_sources/raw/tum/archives/Combinatorial O 950730014 (S24)_20261012_1548.zip`.
 - `Lecture Notes/lecture notes.pdf`, Problem 2.20, Theorem 2.21, Algorithm 3 and full proof/oracle discussion, pp. 20–22 (through paragraph immediately before Chapter 3).
 - `Lecture Notes/lecture notes.pdf`, Theorem 2.19, p. 20, equal-cardinality characterization for every restriction; Remark 2.9, p. 16, MST weight conversion.
+- `Lecture Notes/class notes for 10 May.pdf`, physical pp. 1–7, complete greedy theorem/proof and independence-oracle reminder.

@@ -7,3 +7,19 @@ nodes:
   - id: co-trees-matroids
     title: Minimum spanning trees and matroids
     parent: null
+
+  - id: co-max-flow
+    title: Maximum flows and residual algorithms
+    parent: null
+
+  - id: co-min-cost-flow
+    title: Minimum-cost flows and circulations
+    parent: null
+
+  - id: co-bipartite
+    title: Bipartite matching and assignment
+    parent: null
+
+  - id: co-general-matching
+    title: General matching and T-joins
+    parent: null

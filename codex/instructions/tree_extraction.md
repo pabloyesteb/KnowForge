@@ -21,11 +21,20 @@
 ## Batch sizing
 
 - Plan batches around coherent chapters, sections and associated exercises—not a fixed time, page count or Item quota. Codex may adjust overly large or small planned batches as evidence warrants, preserving consecutive coverage.
-- Complete only as much as can be read, extracted, cross-checked and validated carefully in the current execution. If needed, stop after a complete subsection/result, update the plan with the precise covered and next-uncovered locations, and continue that batch next time. Never rush, skip content or mark partial work complete.
+- Work through successive coherent units, reading, extracting, cross-checking and validating each carefully. If a subsection or result must be split, record the precise covered and next-uncovered locations and continue immediately. Never rush, skip content or mark partial work complete.
+
+## Autonomous execution
+
+- After the plan and pilot are complete, **continue successive batches autonomously** within the current Source. Do not request approval at batch or chapter boundaries. A validated batch or saved checkpoint is a progress milestone, not a stopping condition.
+- For each batch, inspect the existing plan and Items, read the corresponding originals, extract or revise evidence-backed Items, check overlap and granularity, validate, and record the precise next-uncovered location **before** starting the next batch. Follow the workflow and quality requirements above without shortcuts.
+- Continue working without a self-imposed time, token, context, computational or usage-budget threshold. **Do not monitor, estimate, anticipate or manage budgets as a reason to stop.** Stop voluntarily only when **(a)** the current Source has been fully reconciled and validated or **(b)** a genuine blocker prevents reliable continuation. External system limits may interrupt execution; do not preemptively stop because of them. Do not automatically start a different Source.
+- After every coherent subsection or batch, validate and update the plan with exact covered and next-uncovered source locations, then **immediately continue**. Checkpointing is routine progress tracking, never a stopping condition. If execution is interrupted externally, the latest validated checkpoint must support resumption. Do not rush, skip review or leave incomplete/unvalidated Items merely to begin another batch.
+- Resume from the actual repository state and the existing active plan; do not redo completed extraction. If the checkpoint and production Tree disagree, reconcile them before proceeding. Do not claim completion solely because the planned batches are marked done; perform the Source-level reconciliation.
+- Render the HTML viewer when explicitly requested or when required by the existing project workflow; it need not be regenerated after every batch. Report actual counts only when verified.
 
 ## Working plans
 
-Store per-Source operational plans in **`01_tree/_work/<source-id>.md`**, separate from production category data. Keep them versioned during active extraction; remove them after the Source has been fully extracted and validated. `_work/` contains no `trees/` or `items/` directories and is ignored by Tree category discovery.
+Store per-Source operational plans in **`01_tree/_work/<source-id>.md`**, separate from production category data. This is the canonical location for new plans. If an active legacy plan exists elsewhere (for example, `codex/_work/<source-id>.md`), resume from that plan rather than creating a competing copy; reconcile its location with the documented convention only when safe, preserving its checkpoint and updating references. Never maintain two active plans for the same Source. Keep them versioned during active extraction; remove them after the Source has been fully extracted and validated. `_work/` contains no `trees/` or `items/` directories and is ignored by Tree category discovery.
 
 Use **only these four sections**:
 
@@ -77,4 +86,4 @@ The example abbreviates chapter ranges; in actual plans, make each batch boundar
 
 ## Output discipline
 
-Keep the plan and response concise. At the end of each execution report only changed files, coverage and exact continuation, validation performed, and unresolved blockers. Do not expand scope, add infrastructure, or modify unrelated Sources.
+Keep the plan and response concise. If execution ends, report the stopping reason (Source complete, genuine blocker, or external interruption if identifiable), changed files, coverage and exact continuation (if unfinished), validation performed, and unresolved blockers. Do not invent a budget-related reason for stopping. Do not expand scope, add infrastructure, or modify unrelated Sources.
